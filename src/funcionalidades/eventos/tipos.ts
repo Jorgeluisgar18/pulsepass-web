@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { artistaSchema } from '../artistas/schemas'
+import { artistaSchema } from '../artistas/tipos'
 
 export const categoriaEventoSchema = z.enum([
     'MUSIC',

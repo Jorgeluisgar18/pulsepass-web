@@ -8,7 +8,9 @@ export const errorResponseSchema = z.object({
     details: z.record(z.string(), z.string()),
 })
 
-export type ErrorResponse = z.infer<typeof errorResponseSchema>
+export type ErrorResponse = z.infer<
+    typeof errorResponseSchema
+>
 
 export type TipoApiError =
     | 'http'
@@ -42,9 +44,22 @@ export class ApiError extends Error {
     }
 }
 
-interface HttpOpciones extends Omit<RequestInit, 'headers'> {
+export interface HttpOpciones
+    extends Omit<RequestInit, 'headers'> {
     token?: string | null
     headers?: HeadersInit
+}
+
+type ManejadorNoAutorizado = () => void
+
+let manejadorNoAutorizado:
+    | ManejadorNoAutorizado
+    | null = null
+
+export function configurarManejadorNoAutorizado(
+    manejador: ManejadorNoAutorizado | null,
+) {
+    manejadorNoAutorizado = manejador
 }
 
 const API_BASE_URL = (
@@ -61,8 +76,10 @@ function construirUrl(ruta: string) {
 
 function construirHeaders(
     opciones: HttpOpciones,
-): Headers {
-    const headers = new Headers(opciones.headers)
+) {
+    const headers = new Headers(
+        opciones.headers,
+    )
 
     headers.set('Accept', 'application/json')
 
@@ -72,7 +89,10 @@ function construirHeaders(
         !(opciones.body instanceof FormData) &&
         !headers.has('Content-Type')
     ) {
-        headers.set('Content-Type', 'application/json')
+        headers.set(
+            'Content-Type',
+            'application/json',
+        )
     }
 
     if (opciones.token) {
@@ -107,7 +127,7 @@ async function leerJson(
 
 function mensajeGenericoPorEstado(
     status: number,
-): string {
+) {
     switch (status) {
         case 400:
             return 'La solicitud enviada no es válida.'
@@ -126,7 +146,7 @@ function mensajeGenericoPorEstado(
 
 async function construirErrorHttp(
     response: Response,
-): Promise<ApiError> {
+) {
     const cuerpo = await leerJson(response)
 
     const resultado =
@@ -153,13 +173,10 @@ async function construirErrorHttp(
     })
 }
 
-export async function http<
-    TSchema extends z.ZodType,
->(
+export async function http(
     ruta: string,
-    schema: TSchema,
     opciones: HttpOpciones = {},
-): Promise<z.infer<TSchema>> {
+): Promise<unknown> {
     const {
         token,
         headers: headersOriginales,
@@ -180,23 +197,17 @@ export async function http<
         )
 
         if (!response.ok) {
-            throw await construirErrorHttp(response)
+            const error =
+                await construirErrorHttp(response)
+
+            if (response.status === 401) {
+                manejadorNoAutorizado?.()
+            }
+
+            throw error
         }
 
-        const cuerpo = await leerJson(response)
-
-        const resultado = schema.safeParse(cuerpo)
-
-        if (!resultado.success) {
-            throw new ApiError({
-                tipo: 'respuesta-invalida',
-                status: response.status,
-                message:
-                    'La respuesta del servidor no tiene el formato esperado.',
-            })
-        }
-
-        return resultado.data
+        return await leerJson(response)
     } catch (error: unknown) {
         if (error instanceof ApiError) {
             throw error

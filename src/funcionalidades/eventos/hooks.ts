@@ -15,7 +15,11 @@ export const eventosKeys = {
         ['evento', eventCode] as const,
 
     artista: (stageName: string) =>
-        ['eventos', 'artista', stageName] as const,
+        [
+            'eventos',
+            'artista',
+            stageName,
+        ] as const,
 }
 
 export const eventosQueries = {
@@ -28,7 +32,8 @@ export const eventosQueries = {
 
     detalle: (eventCode: string) =>
         queryOptions({
-            queryKey: eventosKeys.detalle(eventCode),
+            queryKey:
+                eventosKeys.detalle(eventCode),
             queryFn: () =>
                 obtenerEventoPorCodigo(eventCode),
             staleTime: 30_000,
@@ -39,15 +44,20 @@ export const eventosQueries = {
             queryKey:
                 eventosKeys.artista(stageName),
             queryFn: () =>
-                obtenerEventosPorArtista(stageName),
+                obtenerEventosPorArtista(
+                    stageName,
+                ),
             staleTime: 60_000,
         }),
 }
 
-export function useEventosPublicados() {
-    return useQuery(
-        eventosQueries.publicados(),
-    )
+export function useEventosPublicados(
+    enabled = true,
+) {
+    return useQuery({
+        ...eventosQueries.publicados(),
+        enabled,
+    })
 }
 
 export function useEvento(
@@ -60,8 +70,10 @@ export function useEvento(
 
 export function useEventosPorArtista(
     stageName: string,
+    enabled = true,
 ) {
-    return useQuery(
-        eventosQueries.artista(stageName),
-    )
+    return useQuery({
+        ...eventosQueries.artista(stageName),
+        enabled,
+    })
 }

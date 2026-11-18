@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { sedeSchema } from '../../../funcionalidades/sedes/schemas'
+import { sedeSchema } from '../../../funcionalidades/sedes/tipos'
 
-describe('schema de sedes', () => {
+describe('tipos de sedes', () => {
     it('valida un VenueResponse realista', () => {
         const resultado =
             sedeSchema.safeParse({

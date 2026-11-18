@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { artistaSchema } from '../../../funcionalidades/artistas/schemas'
+import { artistaSchema } from '../../../funcionalidades/artistas/tipos'
 
-describe('schema de artistas', () => {
+describe('tipos de artistas', () => {
     it('acepta country y genre nulos', () => {
         const resultado =
             artistaSchema.safeParse({

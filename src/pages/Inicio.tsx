@@ -1,7 +1,29 @@
 import { Link } from 'react-router'
+import Cargando from '../componentes/Cargando'
+import EstadoError from '../componentes/EstadoError'
+import EstadoVacio from '../componentes/EstadoVacio'
+import AvatarArtista from '../funcionalidades/artistas/componentes/AvatarArtista'
+import { useArtistasActivos } from '../funcionalidades/artistas/hooks'
+import TarjetaEvento from '../funcionalidades/eventos/componentes/TarjetaEvento'
+import { useEventosPublicados } from '../funcionalidades/eventos/hooks'
 import { RUTAS } from '../lib/rutas'
 
 export default function Inicio() {
+    const eventos = useEventosPublicados()
+    const artistas = useArtistasActivos()
+
+    const hayError =
+        eventos.isError || artistas.isError
+
+    const cargando =
+        eventos.isLoading ||
+        artistas.isLoading
+
+    function reintentar() {
+        void eventos.refetch()
+        void artistas.refetch()
+    }
+
     return (
         <>
             <section className="bg-linear-to-r from-marca-600 to-acento-500 text-white">
@@ -15,7 +37,8 @@ export default function Inicio() {
                     </h1>
 
                     <p className="mt-6 max-w-2xl text-lg leading-8 text-white/90">
-                        Música, cultura, deporte y tecnología en un solo lugar.
+                        Música, cultura, deporte y
+                        tecnología en un solo lugar.
                     </p>
 
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -36,22 +59,105 @@ export default function Inicio() {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-6xl px-4 py-12">
-                <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                    <p className="text-sm font-semibold text-marca-600">
-                        PulsePass
-                    </p>
+            <div className="mx-auto max-w-6xl space-y-14 px-4 py-12">
+                {cargando && (
+                    <section aria-label="Cargando contenido">
+                        <Cargando mensaje="Cargando eventos y artistas" />
+                    </section>
+                )}
 
-                    <h2 className="font-titulo mt-2 text-2xl font-bold">
-                        Catálogo público
-                    </h2>
+                {!cargando && hayError && (
+                    <EstadoError
+                        mensaje="No pudimos cargar el contenido de inicio."
+                        onReintentar={reintentar}
+                    />
+                )}
 
-                    <p className="mt-3 text-slate-600 dark:text-slate-400">
-                        Los próximos eventos y artistas destacados se conectarán con la
-                        API en la Etapa 6 del plan de implementación.
-                    </p>
-                </div>
-            </section>
+                {!cargando &&
+                    !hayError &&
+                    eventos.data &&
+                    artistas.data && (
+                        <>
+                            <section>
+                                <div className="mb-6 flex items-center justify-between gap-4">
+                                    <h2 className="font-titulo text-2xl font-bold">
+                                        Próximos eventos
+                                    </h2>
+
+                                    <Link
+                                        to={RUTAS.eventos}
+                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                                    >
+                                        Ver todos →
+                                    </Link>
+                                </div>
+
+                                {eventos.data.length ===
+                                0 ? (
+                                    <EstadoVacio
+                                        titulo="Aún no hay eventos publicados"
+                                        mensaje="Cuando haya nuevos eventos disponibles aparecerán aquí."
+                                        accion={
+                                            <Link
+                                                to={RUTAS.eventos}
+                                                className="font-semibold text-marca-600"
+                                            >
+                                                Ir a cartelera
+                                            </Link>
+                                        }
+                                    />
+                                ) : (
+                                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                                        {eventos.data
+                                            .slice(0, 3)
+                                            .map((evento) => (
+                                                <TarjetaEvento
+                                                    key={
+                                                        evento.eventCode
+                                                    }
+                                                    evento={evento}
+                                                />
+                                            ))}
+                                    </div>
+                                )}
+                            </section>
+
+                            <section>
+                                <div className="mb-6 flex items-center justify-between gap-4">
+                                    <h2 className="font-titulo text-2xl font-bold">
+                                        Artistas destacados
+                                    </h2>
+
+                                    <Link
+                                        to={RUTAS.artistas}
+                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                                    >
+                                        Ver todos →
+                                    </Link>
+                                </div>
+
+                                {artistas.data.length ===
+                                0 ? (
+                                    <EstadoVacio
+                                        titulo="Aún no hay artistas disponibles"
+                                        mensaje="Los artistas activos aparecerán aquí."
+                                    />
+                                ) : (
+                                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                        {artistas.data
+                                            .slice(0, 6)
+                                            .map((artista) => (
+                                                <AvatarArtista
+                                                    key={artista.id}
+                                                    artista={artista}
+                                                />
+                                            ))}
+                                    </div>
+                                )}
+                            </section>
+                        </>
+                    )}
+            </div>
         </>
     )
 }

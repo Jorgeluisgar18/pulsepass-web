@@ -1,32 +1,41 @@
 import {
+    afterEach,
+    describe,
+    expect,
+    it,
+    vi,
+} from 'vitest'
+import {
     HttpResponse,
     http as mockHttp,
 } from 'msw'
-import { z } from 'zod'
-import { describe, expect, it } from 'vitest'
 import {
     ApiError,
+    configurarManejadorNoAutorizado,
     http,
 } from '../../lib/http'
 import { server } from '../mocks/server'
 
-const respuestaSchema = z.object({
-    mensaje: z.string(),
-})
-
 describe('http', () => {
-    it('devuelve una respuesta válida cuando coincide con el schema', async () => {
+    afterEach(() => {
+        configurarManejadorNoAutorizado(
+            null,
+        )
+    })
+
+    it('devuelve el cuerpo JSON de una respuesta exitosa', async () => {
         server.use(
-            mockHttp.get('/api/prueba/ok', () =>
-                HttpResponse.json({
-                    mensaje: 'correcto',
-                }),
+            mockHttp.get(
+                '/api/prueba/ok',
+                () =>
+                    HttpResponse.json({
+                        mensaje: 'correcto',
+                    }),
             ),
         )
 
         const resultado = await http(
             '/prueba/ok',
-            respuestaSchema,
         )
 
         expect(resultado).toEqual({
@@ -45,7 +54,8 @@ describe('http', () => {
                                 '2026-11-18T16:30:00',
                             status: 400,
                             error: 'Bad Request',
-                            message: 'Validation failed',
+                            message:
+                                'Validation failed',
                             details: {
                                 eventCode:
                                     'Event code is required',
@@ -59,10 +69,7 @@ describe('http', () => {
         )
 
         await expect(
-            http(
-                '/prueba/validacion',
-                respuestaSchema,
-            ),
+            http('/prueba/validacion'),
         ).rejects.toMatchObject({
             name: 'ApiError',
             tipo: 'http',
@@ -75,29 +82,6 @@ describe('http', () => {
         })
     })
 
-    it('rechaza una respuesta exitosa con formato inesperado', async () => {
-        server.use(
-            mockHttp.get(
-                '/api/prueba/invalida',
-                () =>
-                    HttpResponse.json({
-                        campoInesperado: true,
-                    }),
-            ),
-        )
-
-        await expect(
-            http(
-                '/prueba/invalida',
-                respuestaSchema,
-            ),
-        ).rejects.toMatchObject({
-            name: 'ApiError',
-            tipo: 'respuesta-invalida',
-            status: 200,
-        })
-    })
-
     it('convierte un fallo de red en ApiError de tipo red', async () => {
         server.use(
             mockHttp.get(
@@ -107,10 +91,7 @@ describe('http', () => {
         )
 
         await expect(
-            http(
-                '/prueba/red',
-                respuestaSchema,
-            ),
+            http('/prueba/red'),
         ).rejects.toMatchObject({
             name: 'ApiError',
             tipo: 'red',
@@ -118,35 +99,18 @@ describe('http', () => {
         })
     })
 
-    it('envía el JWT únicamente mediante Authorization Bearer', async () => {
+    it('envía el JWT mediante Authorization Bearer', async () => {
         server.use(
             mockHttp.get(
                 '/api/prueba/token',
                 ({ request }) => {
-                    const authorization =
+                    expect(
                         request.headers.get(
                             'Authorization',
-                        )
-
-                    if (
-                        authorization !==
-                        'Bearer token-de-prueba'
-                    ) {
-                        return HttpResponse.json(
-                            {
-                                timestamp:
-                                    '2026-11-18T16:30:00',
-                                status: 401,
-                                error: 'Unauthorized',
-                                message:
-                                    'Authentication is required or token is invalid',
-                                details: {},
-                            },
-                            {
-                                status: 401,
-                            },
-                        )
-                    }
+                        ),
+                    ).toBe(
+                        'Bearer token-de-prueba',
+                    )
 
                     return HttpResponse.json({
                         mensaje: 'autorizado',
@@ -157,24 +121,62 @@ describe('http', () => {
 
         const resultado = await http(
             '/prueba/token',
-            respuestaSchema,
             {
                 token: 'token-de-prueba',
             },
         )
 
-        expect(resultado.mensaje).toBe(
-            'autorizado',
+        expect(resultado).toEqual({
+            mensaje: 'autorizado',
+        })
+    })
+
+    it('dispara el manejador de no autorizado ante 401', async () => {
+        const manejador = vi.fn()
+
+        configurarManejadorNoAutorizado(
+            manejador,
+        )
+
+        server.use(
+            mockHttp.get(
+                '/api/prueba/401',
+                () =>
+                    HttpResponse.json(
+                        {
+                            timestamp:
+                                '2026-11-18T16:30:00',
+                            status: 401,
+                            error: 'Unauthorized',
+                            message:
+                                'Authentication is required or token is invalid',
+                            details: {},
+                        },
+                        {
+                            status: 401,
+                        },
+                    ),
+            ),
+        )
+
+        await expect(
+            http('/prueba/401'),
+        ).rejects.toMatchObject({
+            status: 401,
+            tipo: 'http',
+        })
+
+        expect(manejador).toHaveBeenCalledTimes(
+            1,
         )
     })
-})
 
-describe('ApiError', () => {
-    it('es una instancia de Error y conserva su información segura', () => {
+    it('ApiError conserva su información segura', () => {
         const error = new ApiError({
             tipo: 'http',
             status: 409,
-            message: 'Conflicto de negocio',
+            message:
+                'Conflicto de negocio',
             details: {
                 eventCode: 'Duplicado',
             },

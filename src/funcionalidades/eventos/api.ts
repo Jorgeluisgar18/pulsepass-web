@@ -1,34 +1,49 @@
 import { http } from '../../lib/http'
+import { validarRespuesta } from '../../lib/validacion'
 import {
     eventoSchema,
     eventosResumenSchema,
-} from './schemas'
+} from './tipos'
 
-export function obtenerEventosPublicados() {
-    return http(
+export async function obtenerEventosPublicados() {
+    const datos = await http(
         '/events/published',
+    )
+
+    return validarRespuesta(
         eventosResumenSchema,
+        datos,
     )
 }
 
-export function obtenerEventoPorCodigo(
+export async function obtenerEventoPorCodigo(
     eventCode: string,
 ) {
-    return http(
-        `/events/${encodeURIComponent(eventCode)}`,
+    const datos = await http(
+        `/events/${encodeURIComponent(
+            eventCode,
+        )}`,
+    )
+
+    return validarRespuesta(
         eventoSchema,
+        datos,
     )
 }
 
-export function obtenerEventosPorArtista(
+export async function obtenerEventosPorArtista(
     stageName: string,
 ) {
     const parametros = new URLSearchParams({
         stageName,
     })
 
-    return http(
+    const datos = await http(
         `/events/by-artist?${parametros.toString()}`,
+    )
+
+    return validarRespuesta(
         eventosResumenSchema,
+        datos,
     )
 }

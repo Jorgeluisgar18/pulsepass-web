@@ -17,9 +17,11 @@ const eventoResumen = {
     name: 'Caribbean Music Fest 2026',
     category: 'MUSIC',
     status: 'PUBLISHED',
-    eventDate: '2026-12-12T20:00:00',
+    eventDate:
+        '2026-12-12T20:00:00',
     venueCode: 'VEN-SMR-01',
-    venueName: 'Marina Convention Center',
+    venueName:
+        'Marina Convention Center',
 }
 
 describe('API de eventos', () => {
@@ -38,9 +40,10 @@ describe('API de eventos', () => {
             await obtenerEventosPublicados()
 
         expect(resultado).toHaveLength(1)
-        expect(resultado[0]?.eventCode).toBe(
-            'CMF-2026',
-        )
+
+        expect(
+            resultado[0]?.eventCode,
+        ).toBe('CMF-2026')
     })
 
     it('consulta el detalle por eventCode', async () => {
@@ -74,10 +77,14 @@ describe('API de eventos', () => {
             mockHttp.get(
                 '/api/events/by-artist',
                 ({ request }) => {
-                    const url = new URL(request.url)
+                    const url = new URL(
+                        request.url,
+                    )
 
                     expect(
-                        url.searchParams.get('stageName'),
+                        url.searchParams.get(
+                            'stageName',
+                        ),
                     ).toBe('Solar Beat')
 
                     return HttpResponse.json([
@@ -95,16 +102,40 @@ describe('API de eventos', () => {
         expect(resultado).toHaveLength(1)
     })
 
-    it('configura las query keys y staleTime del PRD', () => {
+    it('rechaza una respuesta exitosa que incumple el contrato', async () => {
+        server.use(
+            mockHttp.get(
+                '/api/events/published',
+                () =>
+                    HttpResponse.json([
+                        {
+                            id: 1,
+                            eventCode: 'CMF-2026',
+                        },
+                    ]),
+            ),
+        )
+
+        await expect(
+            obtenerEventosPublicados(),
+        ).rejects.toMatchObject({
+            name: 'ApiError',
+            tipo: 'respuesta-invalida',
+        })
+    })
+
+    it('configura query keys y staleTime del catálogo', () => {
         expect(
-            eventosQueries.publicados().queryKey,
+            eventosQueries.publicados()
+                .queryKey,
         ).toEqual([
             'eventos',
             'publicados',
         ])
 
         expect(
-            eventosQueries.publicados().staleTime,
+            eventosQueries.publicados()
+                .staleTime,
         ).toBe(60_000)
 
         expect(

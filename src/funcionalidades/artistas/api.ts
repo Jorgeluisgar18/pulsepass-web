@@ -1,34 +1,49 @@
 import { http } from '../../lib/http'
+import { validarRespuesta } from '../../lib/validacion'
 import {
     artistaSchema,
     artistasSchema,
-} from './schemas'
+} from './tipos'
 
-export function obtenerArtistasActivos() {
-    return http(
+export async function obtenerArtistasActivos() {
+    const datos = await http(
         '/artists/active',
+    )
+
+    return validarRespuesta(
         artistasSchema,
+        datos,
     )
 }
 
-export function obtenerArtistaPorId(
+export async function obtenerArtistaPorId(
     id: number,
 ) {
-    return http(
-        `/artists/${encodeURIComponent(String(id))}`,
+    const datos = await http(
+        `/artists/${encodeURIComponent(
+            String(id),
+        )}`,
+    )
+
+    return validarRespuesta(
         artistaSchema,
+        datos,
     )
 }
 
-export function obtenerArtistaPorNombre(
+export async function obtenerArtistaPorNombre(
     stageName: string,
 ) {
     const parametros = new URLSearchParams({
         stageName,
     })
 
-    return http(
+    const datos = await http(
         `/artists/by-stage-name?${parametros.toString()}`,
+    )
+
+    return validarRespuesta(
         artistaSchema,
+        datos,
     )
 }

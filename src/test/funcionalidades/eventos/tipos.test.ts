@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest'
 import {
     eventoResumenSchema,
     eventoSchema,
-} from '../../../funcionalidades/eventos/schemas'
+} from '../../../funcionalidades/eventos/tipos'
 
-describe('schemas de eventos', () => {
+describe('tipos de eventos', () => {
     it('valida un EventSummaryResponse realista', () => {
         const resultado =
             eventoResumenSchema.safeParse({
