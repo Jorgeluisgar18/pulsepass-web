@@ -3,6 +3,7 @@ import {
     Link,
     useRouteError,
 } from 'react-router'
+import Boton from '../componentes/Boton'
 import { RUTAS } from '../lib/rutas'
 
 export default function ErrorPagina() {
@@ -19,6 +20,10 @@ export default function ErrorPagina() {
         }
     }
 
+    function reintentar() {
+        window.location.reload()
+    }
+
     return (
         <section className="mx-auto flex min-h-screen max-w-6xl items-center justify-center px-4 py-20">
             <div className="max-w-lg text-center">
@@ -30,7 +35,11 @@ export default function ErrorPagina() {
                     {mensaje}
                 </p>
 
-                <div className="mt-8">
+                <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+                    <Boton variante="secundario" onClick={reintentar}>
+                        Reintentar
+                    </Boton>
+
                     <Link
                         to={RUTAS.inicio}
                         className="inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-5 py-3 font-semibold text-white hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
