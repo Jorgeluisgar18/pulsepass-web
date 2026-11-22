@@ -63,11 +63,15 @@ describe('DetalleEvento', () => {
 
     expect(screen.getByText('Marina Convention Center')).toBeInTheDocument()
 
-    expect(
-      screen.getByRole('link', {
-        name: 'Inicia sesión para comprar',
-      }),
-    ).toHaveAttribute('href', '/login')
+    const enlacesCompra = screen.getAllByRole('link', {
+      name: 'Inicia sesión para comprar',
+    })
+
+    expect(enlacesCompra).toHaveLength(2)
+
+    enlacesCompra.forEach((enlace) => {
+      expect(enlace).toHaveAttribute('href', '/login')
+    })
   })
 
   it('muestra Evento no disponible ante 404', async () => {
@@ -113,11 +117,15 @@ describe('DetalleEvento', () => {
 
     renderDetalle()
 
-    const boton = await screen.findByRole('button', {
+    const botones = await screen.findAllByRole('button', {
       name: 'Compra no disponible',
     })
 
-    expect(boton).toBeDisabled()
+    expect(botones).toHaveLength(2)
+
+    botones.forEach((boton) => {
+      expect(boton).toBeDisabled()
+    })
 
     expect(screen.getByText('El evento está agotado.')).toBeInTheDocument()
   })
