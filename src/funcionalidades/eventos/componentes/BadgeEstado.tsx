@@ -11,7 +11,7 @@ const tonosEstado = {
   PUBLISHED: 'exito',
   SOLD_OUT: 'advertencia',
   CANCELLED: 'error',
-  FINISHED: 'neutral',
+  FINISHED: 'finalizado',
 } as const
 
 export default function BadgeEstado({ estado }: BadgeEstadoProps) {
