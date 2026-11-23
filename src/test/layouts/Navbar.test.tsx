@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { createMemoryRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
 import { describe, expect, it } from 'vitest'
+import { AuthProvider } from '../../funcionalidades/auth/AuthContext'
 import Navbar from '../../layouts/Navbar'
 
 function renderNavbar() {
@@ -10,7 +11,11 @@ function renderNavbar() {
         [
             {
                 path: '*',
-                element: <Navbar />,
+                element: (
+                    <AuthProvider>
+                        <Navbar />
+                    </AuthProvider>
+                ),
             },
         ],
         {

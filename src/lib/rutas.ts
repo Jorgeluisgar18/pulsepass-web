@@ -63,3 +63,20 @@ export const PATRONES_RUTA = {
     sinPermisos: '403',
     noEncontrada: '*',
 } as const
+
+export function esRutaInternaSegura(destino: unknown): destino is string {
+    if (typeof destino !== 'string') {
+        return false
+    }
+
+    if (!destino.startsWith('/') || destino.startsWith('//')) {
+        return false
+    }
+
+    try {
+        const url = new URL(destino, 'https://pulsepass.local')
+        return url.origin === 'https://pulsepass.local'
+    } catch {
+        return false
+    }
+}

@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router'
 import type { RouteObject } from 'react-router'
-import CargandoRuta from "./layouts/CargandoRuta";
+import RutaPorRol from './funcionalidades/auth/componentes/RutaPorRol'
+import RutaProtegida from './funcionalidades/auth/componentes/RutaProtegida'
+import SoloAnonimo from './funcionalidades/auth/componentes/SoloAnonimo'
+import CargandoRuta from './layouts/CargandoRuta'
 import Layout from './layouts/Layout'
 import { PATRONES_RUTA } from './lib/rutas'
 import ErrorPagina from './pages/ErrorPagina'
@@ -57,75 +60,105 @@ export const rutasAplicacion: RouteObject[] = [
                 }),
             },
 
+            // Solo accesible para usuarios anónimos
             {
-                path: PATRONES_RUTA.login,
-                lazy: async () => ({
-                    Component: (await import('./pages/Login')).default,
-                }),
-            },
-            {
-                path: PATRONES_RUTA.registro,
-                lazy: async () => ({
-                    Component: (await import('./pages/Registro')).default,
-                }),
-            },
-
-            {
-                path: PATRONES_RUTA.cuenta,
-                lazy: async () => ({
-                    Component: (await import('./pages/Cuenta')).default,
-                }),
-            },
-
-            {
-                path: PATRONES_RUTA.misTickets,
-                lazy: async () => ({
-                    Component: (await import('./pages/MisTickets')).default,
-                }),
-            },
-            {
-                path: PATRONES_RUTA.ticket,
-                lazy: async () => ({
-                    Component: (await import('./pages/DetalleTicket')).default,
-                }),
-            },
-            {
-                path: PATRONES_RUTA.confirmacionCompra,
-                lazy: async () => ({
-                    Component: (await import('./pages/ConfirmacionCompra')).default,
-                }),
+                element: <SoloAnonimo />,
+                children: [
+                    {
+                        path: PATRONES_RUTA.login,
+                        lazy: async () => ({
+                            Component: (await import('./pages/Login')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.registro,
+                        lazy: async () => ({
+                            Component: (await import('./pages/Registro')).default,
+                        }),
+                    },
+                ],
             },
 
+            // Ruta protegida para cualquier usuario autenticado
             {
-                path: PATRONES_RUTA.staffValidacion,
-                lazy: async () => ({
-                    Component: (await import('./pages/ValidacionIngreso')).default,
-                }),
-            },
-            {
-                path: PATRONES_RUTA.staffTicketsEvento,
-                lazy: async () => ({
-                    Component: (await import('./pages/TicketsPagadosEvento')).default,
-                }),
+                element: <RutaProtegida />,
+                children: [
+                    {
+                        path: PATRONES_RUTA.cuenta,
+                        lazy: async () => ({
+                            Component: (await import('./pages/Cuenta')).default,
+                        }),
+                    },
+                ],
             },
 
+            // Rutas para rol USER
             {
-                path: PATRONES_RUTA.adminEventos,
-                lazy: async () => ({
-                    Component: (await import('./pages/AdminEventos')).default,
-                }),
+                element: <RutaPorRol rolesPermitidos={['USER']} />,
+                children: [
+                    {
+                        path: PATRONES_RUTA.misTickets,
+                        lazy: async () => ({
+                            Component: (await import('./pages/MisTickets')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.ticket,
+                        lazy: async () => ({
+                            Component: (await import('./pages/DetalleTicket')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.confirmacionCompra,
+                        lazy: async () => ({
+                            Component: (await import('./pages/ConfirmacionCompra')).default,
+                        }),
+                    },
+                ],
             },
+
+            // Rutas para rol STAFF o ADMIN
             {
-                path: PATRONES_RUTA.adminNuevoEvento,
-                lazy: async () => ({
-                    Component: (await import('./pages/AdminCrearEvento')).default,
-                }),
+                element: <RutaPorRol rolesPermitidos={['STAFF', 'ADMIN']} />,
+                children: [
+                    {
+                        path: PATRONES_RUTA.staffValidacion,
+                        lazy: async () => ({
+                            Component: (await import('./pages/ValidacionIngreso')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.staffTicketsEvento,
+                        lazy: async () => ({
+                            Component: (await import('./pages/TicketsPagadosEvento')).default,
+                        }),
+                    },
+                ],
             },
+
+            // Rutas para rol ADMIN
             {
-                path: PATRONES_RUTA.adminEvento,
-                lazy: async () => ({
-                    Component: (await import('./pages/AdminGestionEvento')).default,
-                }),
+                element: <RutaPorRol rolesPermitidos={['ADMIN']} />,
+                children: [
+                    {
+                        path: PATRONES_RUTA.adminEventos,
+                        lazy: async () => ({
+                            Component: (await import('./pages/AdminEventos')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.adminNuevoEvento,
+                        lazy: async () => ({
+                            Component: (await import('./pages/AdminCrearEvento')).default,
+                        }),
+                    },
+                    {
+                        path: PATRONES_RUTA.adminEvento,
+                        lazy: async () => ({
+                            Component: (await import('./pages/AdminGestionEvento')).default,
+                        }),
+                    },
+                ],
             },
 
             {

@@ -9,6 +9,7 @@ import {
     type RouteObject,
 } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
+import { AuthProvider } from '../../funcionalidades/auth/AuthContext'
 
 interface RenderConRouterOpciones {
     rutaInicial?: string
@@ -37,7 +38,7 @@ export function renderConRouter(
     const rutas: RouteObject[] = [
         {
             path: ruta,
-            element: elemento,
+            element: <AuthProvider>{elemento}</AuthProvider>,
         },
     ]
 
