@@ -1,0 +1,244 @@
+{
+  "run": "20261123133701",
+  "http": [
+    {
+      "passed": true,
+      "path": "/auth/login",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/auth/login",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/auth/login",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/auth/login",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/auth/login",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/events",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/artists/active",
+      "method": "GET",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-FLOW/artists/3",
+      "method": "POST",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-FLOW/artists/3",
+      "method": "POST",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-FLOW/publish",
+      "method": "PATCH",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-FLOW/publish",
+      "method": "PATCH",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098",
+      "method": "GET",
+      "expected": 403,
+      "actual": 403
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098/cancel",
+      "method": "PATCH",
+      "expected": 403,
+      "actual": 403
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098",
+      "method": "GET",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098/use",
+      "method": "PATCH",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098/use",
+      "method": "PATCH",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098/cancel",
+      "method": "PATCH",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-284FF011-0B22-4607-AAF0-6DFFF74F3931/cancel",
+      "method": "PATCH",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/tickets/TKT-284FF011-0B22-4607-AAF0-6DFFF74F3931",
+      "method": "GET",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/events",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-AGE/publish",
+      "method": "PATCH",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/events",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-CAPACITY/publish",
+      "method": "PATCH",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "passed": true,
+      "path": "/tickets",
+      "method": "POST",
+      "expected": 409,
+      "actual": 409
+    },
+    {
+      "passed": true,
+      "path": "/events/QA-20261123133701-CAPACITY",
+      "method": "GET",
+      "expected": 200,
+      "actual": 200
+    }
+  ],
+  "checks": [
+    {
+      "passed": true,
+      "after": "PAID",
+      "name": "Foreign read and cancellation denied without mutation",
+      "before": "PAID"
+    },
+    {
+      "passed": true,
+      "after": "CANCELLED",
+      "name": "Legitimate cancellation"
+    },
+    {
+      "passed": true,
+      "after": "SOLD_OUT",
+      "name": "Small capacity enforced"
+    }
+  ],
+  "tickets": [
+    "TKT-AF22AB85-2729-4D33-B9F2-53D0DD778098",
+    "TKT-284FF011-0B22-4607-AAF0-6DFFF74F3931",
+    "TKT-D97A97BD-2BD2-4FA0-8408-0BEF7C575C64",
+    "TKT-82D9CB00-635E-4E82-AAEC-119503B51E3A"
+  ],
+  "events": [
+    "QA-20261123133701-FLOW",
+    "QA-20261123133701-AGE",
+    "QA-20261123133701-CAPACITY"
+  ]
+}

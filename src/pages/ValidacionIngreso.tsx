@@ -88,6 +88,7 @@ export default function ValidacionIngreso() {
     register,
     handleSubmit,
     setFocus,
+    resetField,
     formState: { errors },
   } = useForm<FormularioBusqueda>({
     resolver: zodResolver(formularioBusquedaSchema),
@@ -119,6 +120,7 @@ export default function ValidacionIngreso() {
     consulta.isFetching,
     consulta.isSuccess,
     setFocus,
+    resetField,
   ])
 
   function buscarTicket({ ticketCode }: FormularioBusqueda) {
@@ -141,6 +143,7 @@ export default function ValidacionIngreso() {
   }
 
   function manejarTicketUsado() {
+    resetField('ticketCode')
     setMensajeExito('Ticket marcado como usado.')
     setFocus('ticketCode')
   }

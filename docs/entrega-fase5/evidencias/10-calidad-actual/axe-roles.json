@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-23T21:06:36.985Z",
+  "api": "real",
+  "checks": [
+    {
+      "role": "USER_A",
+      "route": "/cuenta",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "USER_A",
+      "route": "/mis-tickets",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 22
+        }
+      ],
+      "passes": 19
+    },
+    {
+      "role": "STAFF",
+      "route": "/cuenta",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "STAFF",
+      "route": "/staff/validacion",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 20
+    },
+    {
+      "role": "ADMIN",
+      "route": "/cuenta",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 20
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos/nuevo",
+      "theme": "light",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "role": "USER_A",
+      "route": "/cuenta",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "USER_A",
+      "route": "/mis-tickets",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "nodes": 6
+        },
+        {
+          "id": "color-contrast",
+          "nodes": 22
+        }
+      ],
+      "passes": 19
+    },
+    {
+      "role": "STAFF",
+      "route": "/cuenta",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "STAFF",
+      "route": "/staff/validacion",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 20
+    },
+    {
+      "role": "ADMIN",
+      "route": "/cuenta",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 17
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 20
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos/nuevo",
+      "theme": "dark",
+      "viewport": 390,
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    }
+  ],
+  "errors": [],
+  "blockedWrites": []
+}

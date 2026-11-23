@@ -1,0 +1,7 @@
+
+> pulsepass-web@0.0.0 lint
+> eslint .
+
+Bloque 41 verificado el 23 de noviembre de 2026: salida 0, sin errores ni advertencias.
+
+Bloque 42 verificado el 23 de noviembre de 2026: salida 0, sin errores ni advertencias.

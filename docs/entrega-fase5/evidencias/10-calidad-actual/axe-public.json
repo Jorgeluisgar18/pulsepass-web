@@ -1,0 +1,349 @@
+{
+  "date": "2026-11-23T21:06:36.641Z",
+  "results": [
+    {
+      "route": "/",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "route": "/eventos",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 18
+    },
+    {
+      "route": "/artistas",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/sedes",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/not-found",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "route": "/eventos",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 18
+    },
+    {
+      "route": "/artistas",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/sedes",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/not-found",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 16
+    },
+    {
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/not-found",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 4
+        }
+      ],
+      "passes": 16
+    },
+    {
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/not-found",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    }
+  ]
+}

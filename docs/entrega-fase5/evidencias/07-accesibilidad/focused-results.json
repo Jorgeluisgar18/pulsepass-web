@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-23T18:39:13.747Z",
+  "base": "http://127.0.0.1:4173",
+  "api": "real",
+  "checks": [
+    {
+      "id": "FILTER-TEXT",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4173/eventos?q=Innovacion",
+      "text": "Cartelera\nBuscar por nombre\nCategoría\nTodas\nMúsica\nDeportes\nTecnología\nEducación\nCultura\nEntretenimiento\nArtista\nTodos\nCaribbean Sound\nDigital Pulse\nNeon Waves\nOcean Drive\nSolar Beat\nLimpiar\n\n1 evento\n\nTecnología\nEncuentro de Innovacion\nPublicado\nFecha\n23 nov 2028\nSede\nArena PulsePass"
+    },
+    {
+      "id": "FILTER-CATEGORY",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4173/eventos?categoria=TECHNOLOGY",
+      "text": "Cartelera\nBuscar por nombre\nCategoría\nTodas\nMúsica\nDeportes\nTecnología\nEducación\nCultura\nEntretenimiento\nArtista\nTodos\nCaribbean Sound\nDigital Pulse\nNeon Waves\nOcean Drive\nSolar Beat\nLimpiar\n\n1 evento\n\nTecnología\nEncuentro de Innovacion\nPublicado\nFecha\n23 nov 2028\nSede\nArena PulsePass"
+    },
+    {
+      "id": "FILTER-ARTIST",
+      "status": "PASS",
+      "url": "http://127.0.0.1:4173/eventos?artista=Caribbean+Sound",
+      "selected": {
+        "value": "Caribbean Sound",
+        "text": "Caribbean Sound"
+      }
+    },
+    {
+      "id": "MENU-KEYBOARD",
+      "status": "PASS",
+      "keyboard": "Enter abre menú; foco visible inspeccionado por estilo"
+    },
+    {
+      "id": "CONTRAST-light",
+      "status": "PASS",
+      "samples": [
+        {
+          "text": "Saltar al contenido",
+          "foreground": "rgb(67, 56, 202)",
+          "ratio": 7.9
+        },
+        {
+          "text": "PulsePass",
+          "foreground": "rgb(79, 70, 229)",
+          "ratio": 6.27
+        },
+        {
+          "text": "Cartelera",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.04
+        },
+        {
+          "text": "Buscar por nombre",
+          "foreground": "oklch(0.372 0.044 257.287)",
+          "ratio": 9.9
+        },
+        {
+          "text": "Categoría",
+          "foreground": "oklch(0.372 0.044 257.287)",
+          "ratio": 9.9
+        },
+        {
+          "text": "Artista",
+          "foreground": "oklch(0.372 0.044 257.287)",
+          "ratio": 9.9
+        },
+        {
+          "text": "Limpiar",
+          "foreground": "oklch(0.279 0.041 260.031)",
+          "ratio": 14.62
+        },
+        {
+          "text": "MúsicaFestival Caribe PulsePassPublicadoFecha23 no",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "TecnologíaEncuentro de InnovacionPublicadoFecha23 ",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "CulturaFestival Cultural MagdalenaPublicadoFecha23",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaNoche Tropical mayores de 18PublicadoFecha23",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "CulturaEncuentro de aforo reducidoPublicadoFecha23",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaFestival de Musica del CaribePublicadoFecha2",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaQA 20261123133701 FLOWPublicadoFecha24 nov 2",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaQA 20261123133701 AGEPublicadoFecha24 nov 20",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaEncuentro Musical del CaribePublicadoFecha1 ",
+          "foreground": "oklch(0.208 0.042 265.755)",
+          "ratio": 17.83
+        },
+        {
+          "text": "Sedes",
+          "foreground": "oklch(0.446 0.043 257.281)",
+          "ratio": 7.58
+        },
+        {
+          "text": "Artistas",
+          "foreground": "oklch(0.446 0.043 257.281)",
+          "ratio": 7.58
+        }
+      ],
+      "method": "Canvas sRGB resolves computed colors including OKLCH, alpha composited ancestor backgrounds; no gradient text samples included"
+    },
+    {
+      "id": "CONTRAST-dark",
+      "status": "PASS",
+      "samples": [
+        {
+          "text": "Saltar al contenido",
+          "foreground": "rgb(67, 56, 202)",
+          "ratio": 7.9
+        },
+        {
+          "text": "PulsePass",
+          "foreground": "rgb(165, 180, 252)",
+          "ratio": 10.11
+        },
+        {
+          "text": "Cartelera",
+          "foreground": "oklch(0.968 0.007 247.896)",
+          "ratio": 18.4
+        },
+        {
+          "text": "Buscar por nombre",
+          "foreground": "oklch(0.929 0.013 255.508)",
+          "ratio": 16.35
+        },
+        {
+          "text": "Categoría",
+          "foreground": "oklch(0.929 0.013 255.508)",
+          "ratio": 16.35
+        },
+        {
+          "text": "Artista",
+          "foreground": "oklch(0.929 0.013 255.508)",
+          "ratio": 16.35
+        },
+        {
+          "text": "Limpiar",
+          "foreground": "oklab(0.279 -0.00709772 -0.040381)",
+          "ratio": 13.97
+        },
+        {
+          "text": "MúsicaFestival Caribe PulsePassPublicadoFecha23 no",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "TecnologíaEncuentro de InnovacionPublicadoFecha23 ",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "CulturaFestival Cultural MagdalenaPublicadoFecha23",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaNoche Tropical mayores de 18PublicadoFecha23",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "CulturaEncuentro de aforo reducidoPublicadoFecha23",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaFestival de Musica del CaribePublicadoFecha2",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaQA 20261123133701 FLOWPublicadoFecha24 nov 2",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaQA 20261123133701 AGEPublicadoFecha24 nov 20",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "MúsicaEncuentro Musical del CaribePublicadoFecha1 ",
+          "foreground": "oklab(0.208 -0.00310889 -0.0418848)",
+          "ratio": 17.83
+        },
+        {
+          "text": "Sedes",
+          "foreground": "oklch(0.704 0.04 256.788)",
+          "ratio": 7.66
+        },
+        {
+          "text": "Artistas",
+          "foreground": "oklch(0.704 0.04 256.788)",
+          "ratio": 7.66
+        }
+      ],
+      "method": "Canvas sRGB resolves computed colors including OKLCH, alpha composited ancestor backgrounds; no gradient text samples included"
+    }
+  ],
+  "errors": [],
+  "blockedWrites": [],
+  "labels": [
+    {
+      "tag": "INPUT",
+      "name": null,
+      "label": true
+    },
+    {
+      "tag": "SELECT",
+      "name": null,
+      "label": true
+    },
+    {
+      "tag": "SELECT",
+      "name": null,
+      "label": true
+    }
+  ],
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "overflow": false
+}

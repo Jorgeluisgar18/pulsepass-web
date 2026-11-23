@@ -1,0 +1,36 @@
+{
+  "FR-FE": {
+    "CUMPLE": 31,
+    "PARCIAL": 2
+  },
+  "RUTA": {
+    "CUMPLE": 20
+  },
+  "API": {
+    "CUMPLE": 23
+  },
+  "TEST-FE": {
+    "CUMPLE": 50
+  },
+  "DOR": {
+    "CUMPLE": 3,
+    "NO VERIFICADO": 3
+  },
+  "DOD": {
+    "CUMPLE": 17,
+    "PARCIAL": 4
+  },
+  "AC-FE": {
+    "CUMPLE": 22
+  },
+  "QT-FE": {
+    "CUMPLE": 11
+  },
+  "NFR-FE": {
+    "PARCIAL": 5,
+    "CUMPLE": 5
+  },
+  "24.": {
+    "CUMPLE": 10
+  }
+}

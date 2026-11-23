@@ -1,0 +1,51 @@
+
+> pulsepass-web@0.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 335 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                 0.73 kB │ gzip:  0.38 kB
+dist/assets/index-Cl5CSGtt.css                 48.10 kB │ gzip:  8.92 kB
+dist/assets/formato-CDIapYbx.js                 0.08 kB │ gzip:  0.09 kB
+dist/assets/PrecioCOP-DaJWukSb.js               0.25 kB │ gzip:  0.20 kB
+dist/assets/GrillaEventos-CHMlhTcQ.js           0.27 kB │ gzip:  0.22 kB
+dist/assets/errores-ks_q0QfK.js                 0.33 kB │ gzip:  0.24 kB
+dist/assets/hooks-BRlAJ-By.js                   0.71 kB │ gzip:  0.40 kB
+dist/assets/Tabla-CpnyVhA9.js                   0.78 kB │ gzip:  0.36 kB
+dist/assets/Campo-B3S7i_Y5.js                   0.87 kB │ gzip:  0.51 kB
+dist/assets/SinPermisos-CByshrWI.js             0.99 kB │ gzip:  0.48 kB
+dist/assets/NoEncontrada-CiSCIVDo.js            1.00 kB │ gzip:  0.50 kB
+dist/assets/AccionUsarTicket-CtpF2pMz.js        1.03 kB │ gzip:  0.59 kB
+dist/assets/EncabezadoAuth-D5crXYRj.js          1.19 kB │ gzip:  0.63 kB
+dist/assets/AccionCancelarTicket-CKlqAOP-.js    1.57 kB │ gzip:  0.78 kB
+dist/assets/ListaArtistas-C3U_B2_z.js           1.66 kB │ gzip:  0.78 kB
+dist/assets/Modal-BydCdqx4.js                   1.70 kB │ gzip:  0.83 kB
+dist/assets/ListaSedes-CMfhvJLV.js              2.20 kB │ gzip:  1.02 kB
+dist/assets/useMutation--3NtqeF8.js             2.32 kB │ gzip:  0.97 kB
+dist/assets/DetalleArtista-B2QG1AeY.js          2.87 kB │ gzip:  1.16 kB
+dist/assets/hooks-CISZquao.js                   3.27 kB │ gzip:  1.10 kB
+dist/assets/DetalleSede-MzF89npK.js             3.47 kB │ gzip:  1.08 kB
+dist/assets/MisTickets-CWuPqiSh.js              3.59 kB │ gzip:  1.48 kB
+dist/assets/hooks-CESXRBnP.js                   3.83 kB │ gzip:  1.44 kB
+dist/assets/ConfirmacionCompra-DObBkomA.js      4.54 kB │ gzip:  1.35 kB
+dist/assets/CatalogoEventos-CDw9wP8G.js         4.57 kB │ gzip:  2.00 kB
+dist/assets/Login-BnSdpYi7.js                   4.57 kB │ gzip:  1.97 kB
+dist/assets/Cuenta-BNgfwHRf.js                  4.68 kB │ gzip:  1.63 kB
+dist/assets/DetalleTicket-PclB9DUc.js           5.10 kB │ gzip:  1.54 kB
+dist/assets/AdminEventos-cyOqCA3O.js            5.53 kB │ gzip:  1.85 kB
+dist/assets/TicketsPagadosEvento-B2uU6tvp.js    5.77 kB │ gzip:  2.05 kB
+dist/assets/ValidacionIngreso-D1RB4QJs.js       5.84 kB │ gzip:  1.96 kB
+dist/assets/Registro-DaO_VsZa.js                6.11 kB │ gzip:  2.44 kB
+dist/assets/AdminCrearEvento-Bh9e-TOq.js        7.59 kB │ gzip:  2.60 kB
+dist/assets/jsx-runtime-DyZJNswf.js             8.78 kB │ gzip:  3.33 kB
+dist/assets/AdminGestionEvento-BXFgovUu.js      8.79 kB │ gzip:  2.62 kB
+dist/assets/DetalleEvento-DFFfY1QO.js          13.98 kB │ gzip:  4.20 kB
+dist/assets/zod-CgtCr_VT.js                    39.11 kB │ gzip: 13.69 kB
+dist/assets/rutas-FkMynHlC.js                  75.82 kB │ gzip: 24.90 kB
+dist/assets/Boton-DOV9_HOc.js                  93.65 kB │ gzip: 26.99 kB
+dist/assets/index-8jypRwIm.js                 302.44 kB │ gzip: 93.16 kB
+
+✓ built in 465ms

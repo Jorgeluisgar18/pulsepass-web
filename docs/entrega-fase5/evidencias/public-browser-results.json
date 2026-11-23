@@ -1,0 +1,1770 @@
+{
+  "date": "2026-11-23T18:39:20.944Z",
+  "api": "real",
+  "base": "http://127.0.0.1:4173",
+  "checks": [
+    {
+      "id": "VIS-inicio-360-light",
+      "route": "/",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Descubre los mejores eventos",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-360-light.png"
+    },
+    {
+      "id": "VIS-catalogo-360-light",
+      "route": "/eventos",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Cartelera",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-360-light.png"
+    },
+    {
+      "id": "VIS-detalle-evento-360-light",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Festival Caribe PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-360-light.png"
+    },
+    {
+      "id": "VIS-artistas-360-light",
+      "route": "/artistas",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Artistas",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-360-light.png"
+    },
+    {
+      "id": "VIS-detalle-artista-360-light",
+      "route": "/artistas/3",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Caribbean Sound",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-360-light.png"
+    },
+    {
+      "id": "VIS-sedes-360-light",
+      "route": "/sedes",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Sedes",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-360-light.png"
+    },
+    {
+      "id": "VIS-detalle-sede-360-light",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Arena PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-360-light.png"
+    },
+    {
+      "id": "VIS-login-360-light",
+      "route": "/login",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Inicia sesión",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-360-light.png"
+    },
+    {
+      "id": "VIS-registro-360-light",
+      "route": "/registro",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Crea tu cuenta",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-360-light.png"
+    },
+    {
+      "id": "VIS-404-360-light",
+      "route": "/qa-ruta-inexistente",
+      "width": 360,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "No encontramos esta página",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-360-light.png"
+    },
+    {
+      "id": "VIS-inicio-360-dark",
+      "route": "/",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Descubre los mejores eventos",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-360-dark.png"
+    },
+    {
+      "id": "VIS-catalogo-360-dark",
+      "route": "/eventos",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Cartelera",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-360-dark.png"
+    },
+    {
+      "id": "VIS-detalle-evento-360-dark",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Festival Caribe PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-360-dark.png"
+    },
+    {
+      "id": "VIS-artistas-360-dark",
+      "route": "/artistas",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Artistas",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-360-dark.png"
+    },
+    {
+      "id": "VIS-detalle-artista-360-dark",
+      "route": "/artistas/3",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Caribbean Sound",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-360-dark.png"
+    },
+    {
+      "id": "VIS-sedes-360-dark",
+      "route": "/sedes",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Sedes",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-360-dark.png"
+    },
+    {
+      "id": "VIS-detalle-sede-360-dark",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Arena PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-360-dark.png"
+    },
+    {
+      "id": "VIS-login-360-dark",
+      "route": "/login",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Inicia sesión",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-360-dark.png"
+    },
+    {
+      "id": "VIS-registro-360-dark",
+      "route": "/registro",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "Crea tu cuenta",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-360-dark.png"
+    },
+    {
+      "id": "VIS-404-360-dark",
+      "route": "/qa-ruta-inexistente",
+      "width": 360,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 360,
+        "scroll": 360,
+        "h1": "No encontramos esta página",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-360-dark.png"
+    },
+    {
+      "id": "VIS-inicio-390-light",
+      "route": "/",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Descubre los mejores eventos",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-390-light.png"
+    },
+    {
+      "id": "VIS-catalogo-390-light",
+      "route": "/eventos",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Cartelera",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-390-light.png"
+    },
+    {
+      "id": "VIS-detalle-evento-390-light",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Festival Caribe PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-390-light.png"
+    },
+    {
+      "id": "VIS-artistas-390-light",
+      "route": "/artistas",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Artistas",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-390-light.png"
+    },
+    {
+      "id": "VIS-detalle-artista-390-light",
+      "route": "/artistas/3",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Caribbean Sound",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-390-light.png"
+    },
+    {
+      "id": "VIS-sedes-390-light",
+      "route": "/sedes",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Sedes",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-390-light.png"
+    },
+    {
+      "id": "VIS-detalle-sede-390-light",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Arena PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-390-light.png"
+    },
+    {
+      "id": "VIS-login-390-light",
+      "route": "/login",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Inicia sesión",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-390-light.png"
+    },
+    {
+      "id": "VIS-registro-390-light",
+      "route": "/registro",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Crea tu cuenta",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-390-light.png"
+    },
+    {
+      "id": "VIS-404-390-light",
+      "route": "/qa-ruta-inexistente",
+      "width": 390,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "No encontramos esta página",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-390-light.png"
+    },
+    {
+      "id": "VIS-inicio-390-dark",
+      "route": "/",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Descubre los mejores eventos",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-390-dark.png"
+    },
+    {
+      "id": "VIS-catalogo-390-dark",
+      "route": "/eventos",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Cartelera",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-390-dark.png"
+    },
+    {
+      "id": "VIS-detalle-evento-390-dark",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Festival Caribe PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-390-dark.png"
+    },
+    {
+      "id": "VIS-artistas-390-dark",
+      "route": "/artistas",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Artistas",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-390-dark.png"
+    },
+    {
+      "id": "VIS-detalle-artista-390-dark",
+      "route": "/artistas/3",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Caribbean Sound",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-390-dark.png"
+    },
+    {
+      "id": "VIS-sedes-390-dark",
+      "route": "/sedes",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Sedes",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-390-dark.png"
+    },
+    {
+      "id": "VIS-detalle-sede-390-dark",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Arena PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-390-dark.png"
+    },
+    {
+      "id": "VIS-login-390-dark",
+      "route": "/login",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Inicia sesión",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-390-dark.png"
+    },
+    {
+      "id": "VIS-registro-390-dark",
+      "route": "/registro",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "Crea tu cuenta",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-390-dark.png"
+    },
+    {
+      "id": "VIS-404-390-dark",
+      "route": "/qa-ruta-inexistente",
+      "width": 390,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 390,
+        "scroll": 390,
+        "h1": "No encontramos esta página",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-390-dark.png"
+    },
+    {
+      "id": "VIS-inicio-768-light",
+      "route": "/",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Descubre los mejores eventos",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-768-light.png"
+    },
+    {
+      "id": "VIS-catalogo-768-light",
+      "route": "/eventos",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Cartelera",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-768-light.png"
+    },
+    {
+      "id": "VIS-detalle-evento-768-light",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Festival Caribe PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-768-light.png"
+    },
+    {
+      "id": "VIS-artistas-768-light",
+      "route": "/artistas",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Artistas",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-768-light.png"
+    },
+    {
+      "id": "VIS-detalle-artista-768-light",
+      "route": "/artistas/3",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Caribbean Sound",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-768-light.png"
+    },
+    {
+      "id": "VIS-sedes-768-light",
+      "route": "/sedes",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Sedes",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-768-light.png"
+    },
+    {
+      "id": "VIS-detalle-sede-768-light",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Arena PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-768-light.png"
+    },
+    {
+      "id": "VIS-login-768-light",
+      "route": "/login",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Inicia sesión",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-768-light.png"
+    },
+    {
+      "id": "VIS-registro-768-light",
+      "route": "/registro",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Crea tu cuenta",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-768-light.png"
+    },
+    {
+      "id": "VIS-404-768-light",
+      "route": "/qa-ruta-inexistente",
+      "width": 768,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "No encontramos esta página",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-768-light.png"
+    },
+    {
+      "id": "VIS-inicio-768-dark",
+      "route": "/",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Descubre los mejores eventos",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-768-dark.png"
+    },
+    {
+      "id": "VIS-catalogo-768-dark",
+      "route": "/eventos",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Cartelera",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-768-dark.png"
+    },
+    {
+      "id": "VIS-detalle-evento-768-dark",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Festival Caribe PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-768-dark.png"
+    },
+    {
+      "id": "VIS-artistas-768-dark",
+      "route": "/artistas",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Artistas",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-768-dark.png"
+    },
+    {
+      "id": "VIS-detalle-artista-768-dark",
+      "route": "/artistas/3",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Caribbean Sound",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-768-dark.png"
+    },
+    {
+      "id": "VIS-sedes-768-dark",
+      "route": "/sedes",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Sedes",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-768-dark.png"
+    },
+    {
+      "id": "VIS-detalle-sede-768-dark",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Arena PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-768-dark.png"
+    },
+    {
+      "id": "VIS-login-768-dark",
+      "route": "/login",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Inicia sesión",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-768-dark.png"
+    },
+    {
+      "id": "VIS-registro-768-dark",
+      "route": "/registro",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "Crea tu cuenta",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-768-dark.png"
+    },
+    {
+      "id": "VIS-404-768-dark",
+      "route": "/qa-ruta-inexistente",
+      "width": 768,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 768,
+        "scroll": 768,
+        "h1": "No encontramos esta página",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-768-dark.png"
+    },
+    {
+      "id": "VIS-inicio-1280-light",
+      "route": "/",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Descubre los mejores eventos",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-1280-light.png"
+    },
+    {
+      "id": "VIS-catalogo-1280-light",
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Cartelera",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-1280-light.png"
+    },
+    {
+      "id": "VIS-detalle-evento-1280-light",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Festival Caribe PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-1280-light.png"
+    },
+    {
+      "id": "VIS-artistas-1280-light",
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Artistas",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-1280-light.png"
+    },
+    {
+      "id": "VIS-detalle-artista-1280-light",
+      "route": "/artistas/3",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Caribbean Sound",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-1280-light.png"
+    },
+    {
+      "id": "VIS-sedes-1280-light",
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Sedes",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-1280-light.png"
+    },
+    {
+      "id": "VIS-detalle-sede-1280-light",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Arena PulsePass",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-1280-light.png"
+    },
+    {
+      "id": "VIS-login-1280-light",
+      "route": "/login",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Inicia sesión",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-1280-light.png"
+    },
+    {
+      "id": "VIS-registro-1280-light",
+      "route": "/registro",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Crea tu cuenta",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-1280-light.png"
+    },
+    {
+      "id": "VIS-404-1280-light",
+      "route": "/qa-ruta-inexistente",
+      "width": 1280,
+      "theme": "light",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "No encontramos esta página",
+        "dark": false,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-1280-light.png"
+    },
+    {
+      "id": "VIS-inicio-1280-dark",
+      "route": "/",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Descubre los mejores eventos",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/inicio-1280-dark.png"
+    },
+    {
+      "id": "VIS-catalogo-1280-dark",
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Cartelera",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/catalogo-1280-dark.png"
+    },
+    {
+      "id": "VIS-detalle-evento-1280-dark",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Festival Caribe PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-evento-1280-dark.png"
+    },
+    {
+      "id": "VIS-artistas-1280-dark",
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Artistas",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/artistas-1280-dark.png"
+    },
+    {
+      "id": "VIS-detalle-artista-1280-dark",
+      "route": "/artistas/3",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Caribbean Sound",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-artista-1280-dark.png"
+    },
+    {
+      "id": "VIS-sedes-1280-dark",
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Sedes",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/sedes-1280-dark.png"
+    },
+    {
+      "id": "VIS-detalle-sede-1280-dark",
+      "route": "/sedes/DEMO-VENUE-ARENA",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Arena PulsePass",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/detalle-sede-1280-dark.png"
+    },
+    {
+      "id": "VIS-login-1280-dark",
+      "route": "/login",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Inicia sesión",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/login-1280-dark.png"
+    },
+    {
+      "id": "VIS-registro-1280-dark",
+      "route": "/registro",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "Crea tu cuenta",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/registro-1280-dark.png"
+    },
+    {
+      "id": "VIS-404-1280-dark",
+      "route": "/qa-ruta-inexistente",
+      "width": 1280,
+      "theme": "dark",
+      "role": "PUBLIC",
+      "api": "real",
+      "expected": "Página visible sin desbordamiento horizontal",
+      "obtained": {
+        "viewport": 1280,
+        "scroll": 1280,
+        "h1": "No encontramos esta página",
+        "dark": true,
+        "main": 1
+      },
+      "status": "PASS",
+      "screenshot": "06-responsive/404-1280-dark.png"
+    }
+  ],
+  "errors": [],
+  "http": [
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "path": "/api/artists/3",
+      "status": 200
+    },
+    {
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "path": "/api/venues/DEMO-VENUE-ARENA",
+      "status": 200
+    }
+  ]
+}

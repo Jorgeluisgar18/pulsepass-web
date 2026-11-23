@@ -8,6 +8,7 @@ import { describe, expect, it } from 'vitest'
 import { AuthProvider } from '../../../funcionalidades/auth/AuthContext'
 import RutaPorRol from '../../../funcionalidades/auth/componentes/RutaPorRol'
 import type { Rol } from '../../../funcionalidades/auth/tipos'
+import { marcarTicketUsadoApi } from '../../../funcionalidades/tickets/api'
 import TicketsPagadosEvento from '../../../pages/TicketsPagadosEvento'
 import ValidacionIngreso from '../../../pages/ValidacionIngreso'
 import { server } from '../../mocks/server'
@@ -150,6 +151,7 @@ describe('flujos STAFF de tickets', () => {
 
     expect(await screen.findByText('Usado')).toBeInTheDocument()
     expect(screen.getByRole('status')).toHaveTextContent('Ticket marcado como usado.')
+    expect(codigo).toHaveValue('')
     expect(screen.queryByRole('button', { name: 'Marcar como usado' })).not.toBeInTheDocument()
     expect(codigo).toHaveFocus()
     expect(
@@ -181,10 +183,41 @@ describe('flujos STAFF de tickets', () => {
     expect(await screen.findByText('Este ticket ya fue usado o no está pagado; no puede volver a utilizarse.')).toBeInTheDocument()
     expect(screen.getByText('Pagado')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Marcar como usado' })).toBeEnabled()
+    expect(screen.getByRole('textbox', { name: 'Código de ticket' })).toHaveValue('TKT-2026-ABC123')
 
     await user.click(screen.getByRole('button', { name: 'Marcar como usado' }))
     await waitFor(() => expect(usos).toBe(2))
     expect(screen.getByText('Pagado')).toBeInTheDocument()
+  })
+
+  it('TEST-FE-STF-002 retira la acción tras uso exitoso y el cliente API conserva el 409 de un segundo uso', async () => {
+    prepararSesion()
+    let ticket = { ...ticketBase }
+    let usos = 0
+    server.use(
+      mockHttp.get('/api/tickets/TKT-2026-ABC123', () => HttpResponse.json(ticket)),
+      mockHttp.patch('/api/tickets/TKT-2026-ABC123/use', ({ request }) => {
+        expect(request.headers.get('Authorization')).toBe('Bearer staff-token')
+        usos += 1
+        if (ticket.status === 'USED') return respuestaError(409, 'El ticket ya fue utilizado.')
+        ticket = { ...ticket, status: 'USED' }
+        return HttpResponse.json(ticket)
+      }),
+    )
+    const user = userEvent.setup()
+    renderStaff('/staff/validacion')
+    await user.type(await screen.findByRole('textbox', { name: 'Código de ticket' }), ticketBase.ticketCode)
+    await user.keyboard('{Enter}')
+    await user.click(await screen.findByRole('button', { name: 'Marcar como usado' }))
+    expect(await screen.findByText('Usado')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Marcar como usado' })).not.toBeInTheDocument()
+    expect(usos).toBe(1)
+
+    // UI correctly removes the action; the repeat request exercises the real client against MSW.
+    await expect(marcarTicketUsadoApi(ticketBase.ticketCode, 'staff-token')).rejects.toMatchObject({ status: 409 })
+    expect(usos).toBe(2)
+    expect(ticket.status).toBe('USED')
+    expect(screen.queryByRole('button', { name: 'Marcar como usado' })).not.toBeInTheDocument()
   })
 
   it.each([403, 404])('TEST-FE-STF-003 no expone datos privados cuando la búsqueda responde %s', async (status) => {

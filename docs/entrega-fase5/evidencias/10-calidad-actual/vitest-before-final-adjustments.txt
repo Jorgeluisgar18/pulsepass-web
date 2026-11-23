@@ -1,0 +1,17 @@
+
+> pulsepass-web@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 C:/Users/ASUS/Documents/PROYECTOS INTELLIJ IDEA/pulsepass-web
+
+
+ Test Files  28 passed (28)
+      Tests  169 passed (169)
+   Start at  15:15:39
+   Duration  28.28s (environment 60%, setup 15%, tests 14%, import 10%, transform 1%, worker 1%)
+
+Environment  jsdom was created 28 times · 222.61s total, 60% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

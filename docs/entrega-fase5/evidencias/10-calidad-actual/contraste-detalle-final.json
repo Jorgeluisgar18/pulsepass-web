@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-23T21:08:08.697Z",
+  "url": "http://127.0.0.1:4173/eventos/DEMO-EVENT-MUSIC-001",
+  "theme": "dark",
+  "beforeAxe": 3.99,
+  "text": "Música",
+  "foreground": "rgb(165, 180, 252)",
+  "background": "oklch(0.208 0.042 265.755)",
+  "ratio": 8.944166216578763
+}

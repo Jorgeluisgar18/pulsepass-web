@@ -1,0 +1,166 @@
+{
+  "run": "20261123183844",
+  "eventCode": "QA-UI-20261123183844",
+  "api": "real",
+  "steps": [
+    {
+      "name": "admin-formulario-completo",
+      "path": "/admin/eventos/nuevo",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/05-admin/admin-formulario-completo.png",
+      "status": "PASS"
+    },
+    {
+      "name": "admin-evento-creado",
+      "path": "/admin/eventos/QA-UI-20261123183844",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/05-admin/admin-evento-creado.png",
+      "status": "PASS"
+    },
+    {
+      "name": "admin-artista-asociado",
+      "path": "/admin/eventos/QA-UI-20261123183844",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/05-admin/admin-artista-asociado.png",
+      "status": "PASS"
+    },
+    {
+      "name": "admin-evento-publicado",
+      "path": "/admin/eventos/QA-UI-20261123183844",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/05-admin/admin-evento-publicado.png",
+      "status": "PASS"
+    },
+    {
+      "name": "user-confirmar-compra-0",
+      "path": "/eventos/QA-UI-20261123183844",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/03-user/user-confirmar-compra-0.png",
+      "status": "PASS"
+    },
+    {
+      "name": "user-compra-confirmada-0",
+      "path": "/compra/confirmacion/TKT-2C1E90D0-92FA-447E-B1AF-76E71F3B16F1",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/03-user/user-compra-confirmada-0.png",
+      "status": "PASS"
+    },
+    {
+      "name": "user-confirmar-compra-1",
+      "path": "/eventos/QA-UI-20261123183844",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/03-user/user-confirmar-compra-1.png",
+      "status": "PASS"
+    },
+    {
+      "name": "user-compra-confirmada-1",
+      "path": "/compra/confirmacion/TKT-188A4AEE-28E5-4B4D-804A-B4C10A5551E3",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/03-user/user-compra-confirmada-1.png",
+      "status": "PASS"
+    },
+    {
+      "name": "user-ticket-cancelado",
+      "path": "/mis-tickets/TKT-2C1E90D0-92FA-447E-B1AF-76E71F3B16F1",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/03-user/user-ticket-cancelado.png",
+      "status": "PASS"
+    },
+    {
+      "name": "staff-ticket-pagado",
+      "path": "/staff/validacion",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/04-staff/staff-ticket-pagado.png",
+      "status": "PASS"
+    },
+    {
+      "name": "staff-ticket-usado",
+      "path": "/staff/validacion",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "evidence": "docs/entrega-fase5/evidencias/04-staff/staff-ticket-usado.png",
+      "status": "PASS"
+    }
+  ],
+  "http": [
+    {
+      "method": "POST",
+      "path": "/api/events",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/events/QA-UI-20261123183844/artists/3",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/events/QA-UI-20261123183844/publish",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/tickets",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "method": "POST",
+      "path": "/api/tickets",
+      "expected": 201,
+      "actual": 201
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/tickets/TKT-2C1E90D0-92FA-447E-B1AF-76E71F3B16F1/cancel",
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/tickets/TKT-188A4AEE-28E5-4B4D-804A-B4C10A5551E3/use",
+      "expected": 200,
+      "actual": 200
+    }
+  ],
+  "errors": [],
+  "tickets": [
+    "TKT-2C1E90D0-92FA-447E-B1AF-76E71F3B16F1",
+    "TKT-188A4AEE-28E5-4B4D-804A-B4C10A5551E3"
+  ]
+}

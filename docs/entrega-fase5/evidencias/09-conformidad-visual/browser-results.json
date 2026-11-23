@@ -1,0 +1,408 @@
+{
+  "executedAt": "2026-11-23T21:17:12.727Z",
+  "build": {
+    "javascript": "index-CK6k0KnD.js",
+    "stylesheet": "index-CoS_dT1W.css"
+  },
+  "captures": [
+    {
+      "id": "01-main",
+      "route": "/",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/01-main.png",
+      "overflow": false
+    },
+    {
+      "id": "02-catalogo",
+      "route": "/eventos",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/02-catalogo.png",
+      "overflow": false
+    },
+    {
+      "id": "05-artistas",
+      "route": "/artistas",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/05-artistas.png",
+      "overflow": false
+    },
+    {
+      "id": "06-detalle-artista",
+      "route": "/artistas/1",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/06-detalle-artista.png",
+      "overflow": false
+    },
+    {
+      "id": "07-sedes",
+      "route": "/sedes",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/07-sedes.png",
+      "overflow": false
+    },
+    {
+      "id": "08-detalle-sede",
+      "route": "/sedes/DEMO-VENUE-CARIBE",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/08-detalle-sede.png",
+      "overflow": false
+    },
+    {
+      "id": "09-login",
+      "route": "/login",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/09-login.png",
+      "overflow": false
+    },
+    {
+      "id": "10-registro",
+      "route": "/registro",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/10-registro.png",
+      "overflow": false
+    },
+    {
+      "id": "23-404",
+      "route": "/no-existe",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/23-404.png",
+      "overflow": false
+    },
+    {
+      "id": "26-menu-cerrado",
+      "route": "/",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/26-menu-cerrado.png",
+      "overflow": false
+    },
+    {
+      "id": "27-menu-abierto",
+      "route": "/",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/27-menu-abierto.png",
+      "overflow": false
+    },
+    {
+      "id": "28-inicio-movil",
+      "route": "/",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/28-inicio-movil.png",
+      "overflow": false
+    },
+    {
+      "id": "31-catalogo-oscuro",
+      "route": "/eventos",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/31-catalogo-oscuro.png",
+      "overflow": false
+    },
+    {
+      "id": "24-estado-vacio",
+      "route": "/eventos",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "controlled browser mock",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/24-estado-vacio.png",
+      "overflow": false
+    },
+    {
+      "id": "24-estado-error",
+      "route": "/eventos",
+      "actor": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "controlled browser mock",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/24-estado-error.png",
+      "overflow": false
+    },
+    {
+      "id": "32-detalle-oscuro",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/32-detalle-oscuro.png",
+      "overflow": false
+    },
+    {
+      "id": "03-detalle-evento",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/03-detalle-evento.png",
+      "overflow": false
+    },
+    {
+      "id": "04-modal-compra",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/04-modal-compra.png",
+      "overflow": false
+    },
+    {
+      "id": "11-cuenta",
+      "route": "/cuenta",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/11-cuenta.png",
+      "overflow": false
+    },
+    {
+      "id": "12-mis-tickets",
+      "route": "/mis-tickets",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/12-mis-tickets.png",
+      "overflow": false
+    },
+    {
+      "id": "13-modal-cancelar",
+      "route": "/mis-tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/13-modal-cancelar.png",
+      "overflow": false
+    },
+    {
+      "id": "14-detalle-ticket",
+      "route": "/mis-tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/14-detalle-ticket.png",
+      "overflow": false
+    },
+    {
+      "id": "15-confirmacion",
+      "route": "/compra/confirmacion/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/15-confirmacion.png",
+      "overflow": false
+    },
+    {
+      "id": "29-evento-movil",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/29-evento-movil.png",
+      "overflow": false
+    },
+    {
+      "id": "13-modal-cancelar-409",
+      "route": "/mis-tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "actor": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "controlled browser mock",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/13-modal-cancelar-409.png",
+      "overflow": false
+    },
+    {
+      "id": "16-validacion",
+      "route": "/staff/validacion",
+      "actor": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/16-validacion.png",
+      "overflow": false
+    },
+    {
+      "id": "19-pagados",
+      "route": "/staff/eventos/DEMO-EVENT-TICKETS-001/tickets",
+      "actor": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/19-pagados.png",
+      "overflow": false
+    },
+    {
+      "id": "30-pagados-movil",
+      "route": "/staff/eventos/DEMO-EVENT-TICKETS-001/tickets",
+      "actor": "STAFF",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/30-pagados-movil.png",
+      "overflow": false
+    },
+    {
+      "id": "17-validacion-exito",
+      "route": "/staff/validacion",
+      "actor": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "controlled browser mock",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/17-validacion-exito.png",
+      "overflow": false
+    },
+    {
+      "id": "18-validacion-409",
+      "route": "/staff/validacion",
+      "actor": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "controlled browser mock",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/18-validacion-409.png",
+      "overflow": false
+    },
+    {
+      "id": "20-admin-eventos",
+      "route": "/admin/eventos",
+      "actor": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/20-admin-eventos.png",
+      "overflow": false
+    },
+    {
+      "id": "21-admin-crear",
+      "route": "/admin/eventos/nuevo",
+      "actor": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/21-admin-crear.png",
+      "overflow": false
+    },
+    {
+      "id": "22-admin-gestion",
+      "route": "/admin/eventos/DEMO-EVENT-DRAFT-001",
+      "actor": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "api": "real read-only",
+      "file": "docs/entrega-fase5/evidencias/09-conformidad-visual/22-admin-gestion.png",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "blockedWrites": [],
+  "realBusinessWrites": 0
+}

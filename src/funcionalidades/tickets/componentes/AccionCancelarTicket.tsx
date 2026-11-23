@@ -1,3 +1,4 @@
+import Aviso from '../../../componentes/Aviso'
 import { useState } from 'react'
 import Boton from '../../../componentes/Boton'
 import Modal from '../../../componentes/Modal'
@@ -73,9 +74,9 @@ export default function AccionCancelarTicket({
           </p>
 
           {cancelar.error && (
-            <p role="alert" className="text-sm text-red-700 dark:text-red-300">
+            <Aviso tipo="error">
               {mensajeErrorCancelacion(cancelar.error)}
-            </p>
+            </Aviso>
           )}
 
           <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">

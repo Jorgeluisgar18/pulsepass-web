@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-23T21:06:18.505Z",
+  "browsers": [
+    {
+      "name": "Chrome",
+      "available": true,
+      "version": "157.0.8103.80"
+    },
+    {
+      "name": "Edge",
+      "available": true,
+      "version": "158.0.4370.33"
+    },
+    {
+      "name": "Firefox",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at C:\\Users\\ASUS\\AppData\\Local\\ms-playwright\\firefox-1578\\firefox\\firefox.exe"
+    },
+    {
+      "name": "WebKit",
+      "available": false,
+      "reason": "browserType.launch: Executable doesn't exist at C:\\Users\\ASUS\\AppData\\Local\\ms-playwright\\webkit-2395\\Playwright.exe"
+    }
+  ],
+  "lazy": {
+    "url": "http://127.0.0.1:4173/",
+    "resources": [
+      "/assets/index-BUkqJp1l.js",
+      "/assets/jsx-runtime-DyZJNswf.js",
+      "/assets/rutas-FkMynHlC.js",
+      "/assets/Boton-DOV9_HOc.js",
+      "/assets/index-CoS_dT1W.css",
+      "/api/events/published",
+      "/api/artists/active",
+      "/favicon.svg"
+    ],
+    "adminStaffLoaded": [],
+    "pass": true
+  },
+  "scope": "Read-only initial home resource capture; no API writes"
+}

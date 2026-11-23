@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-23T18:41:56.126Z",
+  "api": "real",
+  "checks": [
+    {
+      "role": "USER_A",
+      "route": "/cuenta",
+      "status": "PASS",
+      "screenshot": "03-user/cuenta-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "USER_A",
+      "route": "/mis-tickets",
+      "status": "PASS",
+      "screenshot": "03-user/mis-tickets-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "STAFF",
+      "route": "/cuenta",
+      "status": "PASS",
+      "screenshot": "04-staff/cuenta-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "STAFF",
+      "route": "/staff/validacion",
+      "status": "PASS",
+      "screenshot": "04-staff/staff-validacion-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "ADMIN",
+      "route": "/cuenta",
+      "status": "PASS",
+      "screenshot": "05-admin/cuenta-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos",
+      "status": "PASS",
+      "screenshot": "05-admin/admin-eventos-390.png",
+      "viewport": 390,
+      "api": "real"
+    },
+    {
+      "role": "ADMIN",
+      "route": "/admin/eventos/nuevo",
+      "status": "PASS",
+      "screenshot": "05-admin/admin-eventos-nuevo-390.png",
+      "viewport": 390,
+      "api": "real"
+    }
+  ],
+  "errors": [],
+  "blockedWrites": []
+}

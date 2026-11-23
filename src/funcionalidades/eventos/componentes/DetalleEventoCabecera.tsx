@@ -17,7 +17,7 @@ const fondosCategoria: Record<CategoriaEvento, string> = {
   SPORTS:
     'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
   TECHNOLOGY:
-    'bg-slate-200 text-marca-700 dark:bg-slate-800 dark:text-marca-500',
+    'bg-slate-200 text-marca-700 dark:bg-slate-800 dark:text-marca-300',
   EDUCATION: 'bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300',
   CULTURE: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300',
   ENTERTAINMENT:
@@ -40,7 +40,7 @@ export default function DetalleEventoCabecera({
 
       <div className="space-y-5 p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-marca-700 dark:text-marca-500 text-xs font-bold tracking-wide uppercase">
+          <span className="text-marca-700 dark:text-marca-300 text-xs font-bold tracking-wide uppercase">
             {etiquetaCategoria(evento.category)}
           </span>
 
