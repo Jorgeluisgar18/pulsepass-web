@@ -34,12 +34,8 @@ export const registroUsuarioSchema = z.object({
   username: z
     .string()
     .trim()
-    .min(3, 'El nombre de usuario debe tener al menos 3 caracteres.')
-    .max(50, 'El nombre de usuario no puede exceder 50 caracteres.')
-    .regex(
-      /^[a-zA-Z0-9_.-]+$/,
-      'El nombre de usuario solo puede contener letras, números, puntos, guiones y guiones bajos.',
-    ),
+    .min(1, 'El nombre de usuario es obligatorio.')
+    .max(255, 'El nombre de usuario no puede exceder 255 caracteres.'),
   email: z
     .string()
     .trim()
@@ -49,22 +45,22 @@ export const registroUsuarioSchema = z.object({
     .string()
     .trim()
     .min(1, 'El nombre es obligatorio.')
-    .max(100, 'El nombre no puede exceder 100 caracteres.'),
+    .max(255, 'El nombre no puede exceder 255 caracteres.'),
   lastName: z
     .string()
     .trim()
     .min(1, 'El apellido es obligatorio.')
-    .max(100, 'El apellido no puede exceder 100 caracteres.'),
+    .max(255, 'El apellido no puede exceder 255 caracteres.'),
   phone: z
     .string()
     .trim()
-    .max(30, 'El teléfono no puede exceder 30 caracteres.')
+    .max(255, 'El teléfono no puede exceder 255 caracteres.')
     .optional()
     .or(z.literal('')),
   city: z
     .string()
     .trim()
-    .max(100, 'La ciudad no puede exceder 100 caracteres.')
+    .max(255, 'La ciudad no puede exceder 255 caracteres.')
     .optional()
     .or(z.literal('')),
   birthDate: z
