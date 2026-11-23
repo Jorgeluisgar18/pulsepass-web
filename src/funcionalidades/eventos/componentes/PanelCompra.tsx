@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { useAuth } from '../../auth/hooks'
 import { RUTAS } from '../../../lib/rutas'
 import type { EstadoEvento } from '../tipos'
+import { esVisiblePanelCompra } from '../visibilidadCompra'
 
 interface PanelCompraProps {
   eventCode: string
@@ -65,6 +66,12 @@ function AccionCompra({
 
 export default function PanelCompra({ eventCode, estado }: PanelCompraProps) {
   const { sesion } = useAuth()
+  const mostrarPanel = esVisiblePanelCompra(sesion)
+
+  if (!mostrarPanel) {
+    return null
+  }
+
   const estaAutenticado = sesion.estado === 'autenticado'
   const publicado = estado === 'PUBLISHED'
 

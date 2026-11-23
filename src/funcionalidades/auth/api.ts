@@ -66,3 +66,19 @@ export async function obtenerUsuarioPorEmailApi(
 
   return usuarioRespuestaSchema.parse(respuesta)
 }
+
+export async function obtenerUsuarioPorUsernameApi(
+  username: string,
+  token: string,
+): Promise<UsuarioRespuesta> {
+  const respuesta = await http(
+    `/users/by-username?username=${encodeURIComponent(username)}`,
+    {
+      method: 'GET',
+      token,
+      operacion: 'autenticada',
+    },
+  )
+
+  return usuarioRespuestaSchema.parse(respuesta)
+}

@@ -1,8 +1,21 @@
 import { useQuery } from '@tanstack/react-query'
 import { useContext } from 'react'
-import { obtenerUsuarioPorEmailApi } from './api'
+import {
+  obtenerUsuarioPorEmailApi,
+  obtenerUsuarioPorUsernameApi,
+} from './api'
 import { AuthContext } from './contexto'
-import type { AuthContextValor } from './tipos'
+import type {
+  AuthContextValor,
+  UsuarioAutenticado,
+  UsuarioRespuesta,
+} from './tipos'
+
+type CampoPerfilPropio = 'email' | 'username'
+type ConsultaPerfilPropio = (
+  identificador: string,
+  token: string,
+) => Promise<UsuarioRespuesta>
 
 export function useAuth(): AuthContextValor {
   const contexto = useContext(AuthContext)
@@ -12,15 +25,42 @@ export function useAuth(): AuthContextValor {
   return contexto
 }
 
-export function useMiPerfil() {
+function usePerfilPropio(
+  campo: CampoPerfilPropio,
+  consulta: ConsultaPerfilPropio,
+  obtenerIdentificador: (usuario: UsuarioAutenticado) => string,
+  habilitado: boolean,
+) {
   const { sesion } = useAuth()
-  const email = sesion.estado === 'autenticado' ? sesion.usuario.email : ''
+  const usuario = sesion.estado === 'autenticado' ? sesion.usuario : null
+  const identificador = usuario ? obtenerIdentificador(usuario) : ''
   const token = sesion.estado === 'autenticado' ? sesion.token : ''
 
   return useQuery({
-    queryKey: ['usuarios', 'perfil-propio', email],
-    queryFn: () => obtenerUsuarioPorEmailApi(email, token),
-    enabled: Boolean(email && token),
+    queryKey:
+      campo === 'email'
+        ? ['usuarios', 'perfil-propio', identificador]
+        : ['usuarios', 'perfil-propio', campo, identificador],
+    queryFn: () => consulta(identificador, token),
+    enabled: habilitado && Boolean(identificador && token),
     staleTime: 1000 * 60 * 5,
   })
+}
+
+export function useMiPerfil(habilitado = true) {
+  return usePerfilPropio(
+    'email',
+    obtenerUsuarioPorEmailApi,
+    (usuario) => usuario.email,
+    habilitado,
+  )
+}
+
+export function useUsuarioPorUsername(habilitado = true) {
+  return usePerfilPropio(
+    'username',
+    obtenerUsuarioPorUsernameApi,
+    (usuario) => usuario.username,
+    habilitado,
+  )
 }

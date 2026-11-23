@@ -201,8 +201,8 @@ describe('TEST-FE-AUTH', () => {
     expect(limpiarCache).toHaveBeenCalled()
   })
 
-  it('AUTH-005 protege rutas privadas y conserva la ruta original', async () => {
-    renderRuta(
+  it('TEST-FE-AUTH-007 protege rutas privadas y conserva state.desde', async () => {
+    const router = renderRuta(
       [
         {
           element: <AuthProvider><Outlet /></AuthProvider>,
@@ -215,10 +215,14 @@ describe('TEST-FE-AUTH', () => {
           ],
         },
       ],
-      RUTAS.cuenta,
+      `${RUTAS.cuenta}?tab=perfil#datos`,
     )
 
     expect(await screen.findByText('Vista login')).toBeInTheDocument()
+    expect(router.state.location.pathname).toBe('/login')
+    expect(router.state.location.state).toMatchObject({
+      desde: '/cuenta?tab=perfil#datos',
+    })
   })
 
   it('AUTH-006 redirige sin rol a 403 y permite el rol correcto', async () => {
@@ -1054,7 +1058,7 @@ describe('TEST-FE-AUTH', () => {
     ).toBeInTheDocument()
   })
 
-  it('7C registro 201 usa aviso y state registrado', async () => {
+  it('TEST-FE-AUTH-005 registro 201 navega a login con aviso y state registrado', async () => {
     server.use(
       mockHttp.post('/api/users', () =>
         HttpResponse.json(
@@ -1104,6 +1108,7 @@ describe('TEST-FE-AUTH', () => {
 
     expect(await screen.findByText('Cuenta creada, inicia sesión')).toBeInTheDocument()
     expect(router.state.location.state).toMatchObject({ registrado: true })
+    expect(router.state.location.pathname).toBe('/login')
   })
 
   it('7C indicador de fortaleza cambia al escribir contraseña', async () => {

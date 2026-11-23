@@ -1,13 +1,27 @@
+import { useState } from 'react'
 import Badge from '../componentes/Badge'
 import Cargando from '../componentes/Cargando'
 import EstadoError from '../componentes/EstadoError'
 import { Link } from 'react-router'
-import { useAuth, useMiPerfil } from '../funcionalidades/auth/hooks'
+import {
+  useAuth,
+  useMiPerfil,
+  useUsuarioPorUsername,
+} from '../funcionalidades/auth/hooks'
 import { RUTAS } from '../lib/rutas'
 
 export default function Cuenta() {
   const { sesion, cerrarSesion, tieneRol } = useAuth()
-  const { data: perfil, isLoading, isError, refetch } = useMiPerfil()
+  const [metodoConsulta, setMetodoConsulta] = useState<'email' | 'username'>(
+    'email',
+  )
+  const perfilPorEmail = useMiPerfil(metodoConsulta === 'email')
+  const perfilPorUsername = useUsuarioPorUsername(
+    metodoConsulta === 'username',
+  )
+  const consultaPerfil =
+    metodoConsulta === 'email' ? perfilPorEmail : perfilPorUsername
+  const { data: perfil, isLoading, isError, refetch } = consultaPerfil
 
   if (sesion.estado !== 'autenticado') {
     return null
@@ -33,6 +47,20 @@ export default function Cuenta() {
       <h1 className="font-titulo text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
         Mi cuenta
       </h1>
+
+      <button
+        type="button"
+        onClick={() => {
+          setMetodoConsulta((actual) =>
+            actual === 'email' ? 'username' : 'email',
+          )
+        }}
+        className="mt-2 min-h-11 text-left text-sm font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:decoration-slate-600 dark:hover:text-slate-200"
+      >
+        {metodoConsulta === 'email'
+          ? 'Consultar por nombre de usuario'
+          : 'Consultar por correo electrónico'}
+      </button>
 
       {isLoading && (
         <div className="py-12">
