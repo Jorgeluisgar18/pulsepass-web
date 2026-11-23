@@ -4,6 +4,26 @@ import { ApiError, configurarManejadorNoAutorizado, http } from '../../lib/http'
 import { server } from '../mocks/server'
 
 describe('http', () => {
+  it('oculta mensajes y detalles internos de un ErrorResponse 500 válido', async () => {
+    server.use(
+      mockHttp.get('/api/prueba/error-interno', () =>
+        HttpResponse.json({
+          timestamp: '2026-11-22T00:00:00',
+          status: 500,
+          error: 'Internal Server Error',
+          message: 'SQL constraint failed',
+          details: { database: 'internal diagnostic' },
+        }, { status: 500 }),
+      ),
+    )
+
+    await expect(http('/prueba/error-interno')).rejects.toMatchObject({
+      status: 500,
+      message: 'Ocurrió un error inesperado. Inténtalo más tarde.',
+      details: {},
+    })
+  })
+
   afterEach(() => {
     configurarManejadorNoAutorizado(null)
   })
@@ -73,7 +93,7 @@ describe('http', () => {
       name: 'ApiError',
       tipo: 'http',
       status: 500,
-      message: 'Ocurrió un error al comunicarnos con el servidor.',
+      message: 'Ocurrió un error inesperado. Inténtalo más tarde.',
       details: {},
     })
   })
@@ -132,7 +152,7 @@ describe('http', () => {
       ),
     )
 
-    await expect(http('/prueba/401')).rejects.toMatchObject({
+    await expect(http('/prueba/401', { token: 'jwt-valido' })).rejects.toMatchObject({
       status: 401,
       tipo: 'http',
     })

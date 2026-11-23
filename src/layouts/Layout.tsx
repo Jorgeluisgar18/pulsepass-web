@@ -1,24 +1,27 @@
 import { Outlet } from 'react-router'
+import { AuthProvider } from '../funcionalidades/auth/AuthContext'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
 export default function Layout() {
     return (
-        <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-            <a
-                href="#contenido"
-                className="sr-only z-50 rounded-md bg-white px-4 py-2 text-marca-700 focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
-            >
-                Saltar al contenido
-            </a>
+        <AuthProvider>
+            <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+                <a
+                    href="#contenido"
+                    className="sr-only z-50 rounded-md bg-white px-4 py-2 text-marca-700 focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+                >
+                    Saltar al contenido
+                </a>
 
-            <Navbar />
+                <Navbar />
 
-            <main id="contenido" className="flex-1">
-                <Outlet />
-            </main>
+                <main id="contenido" className="flex-1">
+                    <Outlet />
+                </main>
 
-            <Footer />
-        </div>
+                <Footer />
+            </div>
+        </AuthProvider>
     )
 }

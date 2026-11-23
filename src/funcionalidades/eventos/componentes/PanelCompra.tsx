@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
+import { useAuth } from '../../auth/hooks'
 import { RUTAS } from '../../../lib/rutas'
 import type { EstadoEvento } from '../tipos'
+import { esVisiblePanelCompra } from '../visibilidadCompra'
 
 interface PanelCompraProps {
   eventCode: string
@@ -8,25 +10,23 @@ interface PanelCompraProps {
 }
 
 const motivosNoDisponible = {
-  DRAFT:
-    'El evento todavía no está publicado.',
-  SOLD_OUT:
-    'El evento está agotado.',
-  CANCELLED:
-    'El evento fue cancelado.',
-  FINISHED:
-    'El evento ya finalizó.',
+  DRAFT: 'El evento todavía no está publicado.',
+  SOLD_OUT: 'El evento está agotado.',
+  CANCELLED: 'El evento fue cancelado.',
+  FINISHED: 'El evento ya finalizó.',
 } as const
 
 interface AccionCompraProps {
   eventCode: string
   publicado: boolean
+  estaAutenticado: boolean
 }
 
 function AccionCompra({
-                        eventCode,
-                        publicado,
-                      }: AccionCompraProps) {
+  eventCode,
+  publicado,
+  estaAutenticado,
+}: AccionCompraProps) {
   if (!publicado) {
     return (
       <button
@@ -39,14 +39,23 @@ function AccionCompra({
     )
   }
 
+  if (estaAutenticado) {
+    return (
+      <button
+        type="button"
+        disabled
+        className="min-h-11 w-full cursor-not-allowed rounded-lg bg-slate-200 px-4 py-2 font-semibold text-slate-500 dark:bg-slate-800 dark:text-slate-400"
+      >
+        Comprar entradas (próximamente)
+      </button>
+    )
+  }
+
   return (
     <Link
       to={RUTAS.login}
       state={{
-        desde:
-          RUTAS.evento(
-            eventCode,
-          ),
+        desde: RUTAS.evento(eventCode),
       }}
       className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
     >
@@ -55,12 +64,23 @@ function AccionCompra({
   )
 }
 
-export default function PanelCompra({
-                                      eventCode,
-                                      estado,
-                                    }: PanelCompraProps) {
-  const publicado =
-    estado === 'PUBLISHED'
+export default function PanelCompra({ eventCode, estado }: PanelCompraProps) {
+  const { sesion } = useAuth()
+  const mostrarPanel = esVisiblePanelCompra(sesion)
+
+  if (!mostrarPanel) {
+    return null
+  }
+
+  const estaAutenticado = sesion.estado === 'autenticado'
+  const publicado = estado === 'PUBLISHED'
+
+  let mensajeAyuda: string = motivosNoDisponible[estado as keyof typeof motivosNoDisponible] ?? ''
+  if (publicado) {
+    mensajeAyuda = estaAutenticado
+      ? 'La venta de entradas estará disponible próximamente.'
+      : 'Inicia sesión para elegir un tipo de entrada.'
+  }
 
   return (
     <>
@@ -70,39 +90,28 @@ export default function PanelCompra({
         </h2>
 
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-          {publicado
-            ? 'Inicia sesión para elegir un tipo de entrada.'
-            : motivosNoDisponible[
-              estado
-              ]}
+          {mensajeAyuda}
         </p>
 
         <div className="mt-5">
           <AccionCompra
-            eventCode={
-              eventCode
-            }
-            publicado={
-              publicado
-            }
+            eventCode={eventCode}
+            publicado={publicado}
+            estaAutenticado={estaAutenticado}
           />
         </div>
 
         <p className="mt-4 text-xs leading-5 text-slate-500 dark:text-slate-400">
-          El precio lo define el
-          sistema al confirmar.
+          El precio lo define el sistema al confirmar.
         </p>
       </aside>
 
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white/95 p-4 backdrop-blur md:hidden dark:border-slate-800 dark:bg-slate-950/95">
         <div className="mx-auto max-w-6xl">
           <AccionCompra
-            eventCode={
-              eventCode
-            }
-            publicado={
-              publicado
-            }
+            eventCode={eventCode}
+            publicado={publicado}
+            estaAutenticado={estaAutenticado}
           />
         </div>
       </div>
