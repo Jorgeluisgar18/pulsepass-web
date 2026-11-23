@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { HttpResponse, http as mockHttp } from 'msw'
 import { createMemoryRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
@@ -90,8 +91,9 @@ function expectCompraOcultaSinEspacio() {
     screen.queryByRole('link', { name: 'Inicia sesión para comprar' }),
   ).not.toBeInTheDocument()
   expect(
-    screen.queryByRole('button', { name: 'Comprar entradas (próximamente)' }),
+    screen.queryByRole('button', { name: 'Comprar entrada' }),
   ).not.toBeInTheDocument()
+  expect(screen.queryByLabelText('Tipo de entrada')).not.toBeInTheDocument()
 
   const articulo = screen.getByRole('article')
   const contenedor = articulo.closest('.mx-auto.max-w-6xl')
@@ -137,17 +139,19 @@ describe('visibilidad de compra en DetalleEvento', () => {
     })
   })
 
-  it('conserva el placeholder de compra para USER autenticado', async () => {
+  it('permite a USER elegir un tipo y revisar la compra', async () => {
+    const user = userEvent.setup()
     renderDetalle(sesionAutenticada(['USER']))
 
-    const botones = await screen.findAllByRole('button', {
-      name: 'Comprar entradas (próximamente)',
-    })
-
+    const botones = await screen.findAllByRole('button', { name: 'Comprar entrada' })
     expect(botones).toHaveLength(2)
-    botones.forEach((boton) => {
-      expect(boton).toBeDisabled()
-    })
+    await user.selectOptions(screen.getByLabelText('Tipo de entrada'), 'STUDENT')
+    await user.click(botones[0]!)
+
+    const dialogo = await screen.findByRole('dialog', { name: 'Confirmar compra' })
+    expect(dialogo).toHaveTextContent('Caribbean Music Fest 2026')
+    expect(dialogo).toHaveTextContent('Estudiante')
+    expect(dialogo).toHaveTextContent('ana@example.com')
   })
 
   it('conserva el motivo y la acción deshabilitada para un evento agotado', async () => {

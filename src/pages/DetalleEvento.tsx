@@ -104,7 +104,11 @@ export default function DetalleEvento() {
       {mostrarPanelCompra ? (
         <div className="mt-4 grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(18rem,1fr)] md:items-start">
           {contenidoEvento}
-          <PanelCompra eventCode={evento.eventCode} estado={evento.status} />
+          <PanelCompra
+            eventCode={evento.eventCode}
+            estado={evento.status}
+            nombreEvento={evento.name}
+          />
         </div>
       ) : (
         <div className="mt-4">{contenidoEvento}</div>
