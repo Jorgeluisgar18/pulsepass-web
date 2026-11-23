@@ -86,7 +86,7 @@ export default function Inicio() {
 
                                     <Link
                                         to={RUTAS.eventos}
-                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-300 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
                                     >
                                         Ver todos →
                                     </Link>
@@ -100,7 +100,7 @@ export default function Inicio() {
                                         accion={
                                             <Link
                                                 to={RUTAS.eventos}
-                                                className="font-semibold text-marca-600"
+                                                className="font-semibold text-marca-600 dark:text-marca-300"
                                             >
                                                 Ir a cartelera
                                             </Link>
@@ -130,7 +130,7 @@ export default function Inicio() {
 
                                     <Link
                                         to={RUTAS.artistas}
-                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                                        className="rounded text-sm font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-300 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
                                     >
                                         Ver todos →
                                     </Link>

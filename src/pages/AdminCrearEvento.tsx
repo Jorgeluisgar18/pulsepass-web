@@ -106,7 +106,7 @@ export default function AdminCrearEvento() {
   return (
     <div className="mx-auto max-w-4xl space-y-8 px-4 py-8 sm:py-12">
       <header className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-        <p className="text-sm font-semibold text-marca-600">PulsePass</p>
+        <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">PulsePass</p>
         <h1 className="mt-2 font-titulo text-3xl font-bold text-slate-900 dark:text-slate-100">
           Nuevo evento
         </h1>
@@ -164,7 +164,7 @@ export default function AdminCrearEvento() {
                 {...register('description', { onChange: () => setErrorGeneral('') })}
               />
               {(errors.description?.message || errorCampo(crearEvento.error, 'description')) && (
-                <p id="description-error" role="alert" className="text-sm text-red-600">
+                <p id="description-error" role="alert" className="text-sm text-red-600 dark:text-red-300">
                   {errors.description?.message ?? errorCampo(crearEvento.error, 'description')}
                 </p>
               )}
@@ -187,7 +187,7 @@ export default function AdminCrearEvento() {
                 ))}
               </select>
               {(errors.category?.message || errorCampo(crearEvento.error, 'category')) && (
-                <p role="alert" className="text-sm text-red-600">
+                <p role="alert" className="text-sm text-red-600 dark:text-red-300">
                   {errors.category?.message ?? errorCampo(crearEvento.error, 'category')}
                 </p>
               )}
@@ -229,7 +229,7 @@ export default function AdminCrearEvento() {
                 ))}
               </select>
               {(errors.venueCode?.message || errorCampo(crearEvento.error, 'venueCode')) && (
-                <p role="alert" className="text-sm text-red-600">
+                <p role="alert" className="text-sm text-red-600 dark:text-red-300">
                   {errors.venueCode?.message ?? errorCampo(crearEvento.error, 'venueCode')}
                 </p>
               )}
@@ -247,7 +247,7 @@ export default function AdminCrearEvento() {
               </Boton>
               <Link
                 to={RUTAS.adminEventos}
-                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
               >
                 Volver a eventos
               </Link>

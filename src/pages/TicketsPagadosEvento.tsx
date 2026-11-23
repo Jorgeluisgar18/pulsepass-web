@@ -200,7 +200,7 @@ export default function TicketsPagadosEvento() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:py-12">
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8">
-        <p className="text-sm font-semibold text-marca-600">Operación STAFF</p>
+        <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">Operación STAFF</p>
         <h1 className="mt-2 font-titulo text-3xl font-bold text-slate-900 dark:text-slate-100">
           Tickets pagados
         </h1>

@@ -10,7 +10,7 @@ export default function PaginaEnConstruccion({
     return (
         <section className="mx-auto max-w-6xl px-4 py-12">
             <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-                <p className="text-sm font-semibold text-marca-600">
+                <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">
                     PulsePass
                 </p>
 

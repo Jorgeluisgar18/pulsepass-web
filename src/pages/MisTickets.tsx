@@ -128,7 +128,7 @@ export default function MisTickets() {
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-4 py-8">
       <header className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-        <p className="text-sm font-semibold text-marca-600">PulsePass</p>
+        <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">PulsePass</p>
         <h1 className="font-titulo mt-2 text-3xl font-bold text-slate-900 dark:text-slate-100">
           Mis tickets
         </h1>

@@ -20,7 +20,7 @@ export const crearEventoSchema = z.object({
   description: z
     .string()
     .trim()
-    .max(1000, 'La descripción no puede exceder 1000 caracteres.')
+    .max(500, 'La descripción no puede exceder 500 caracteres.')
     .transform((value) => (value.length > 0 ? value : null)),
   category: categoriaEventoSchema,
   eventDate: fechaLocalSchema,

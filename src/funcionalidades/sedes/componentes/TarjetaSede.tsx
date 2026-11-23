@@ -12,7 +12,7 @@ export default function TarjetaSede({ sede }: TarjetaSedeProps) {
   return (
     <Link
       to={RUTAS.sede(sede.code)}
-      className="group hover:border-marca-500 focus-visible:outline-marca-600 block rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 dark:border-slate-800 dark:bg-slate-900"
+      className="group hover:border-marca-500 focus-visible:outline-marca-600 block rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 dark:border-slate-800 dark:bg-slate-900 dark:focus-visible:outline-marca-300"
     >
       <div className="flex items-start justify-between gap-4">
         <h2 className="font-titulo group-hover:text-marca-600 text-lg font-bold text-slate-900 dark:text-slate-100">
@@ -28,7 +28,7 @@ export default function TarjetaSede({ sede }: TarjetaSedeProps) {
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
-          className="mt-0.5 h-4 w-4 shrink-0 text-slate-500"
+          className="mt-0.5 h-4 w-4 shrink-0 text-slate-500 dark:text-slate-300"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"

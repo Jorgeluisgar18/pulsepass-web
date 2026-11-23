@@ -55,7 +55,7 @@ export default function Cuenta() {
             actual === 'email' ? 'username' : 'email',
           )
         }}
-        className="mt-2 min-h-11 text-left text-sm font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:decoration-slate-600 dark:hover:text-slate-200"
+        className="mt-2 min-h-11 text-left text-sm font-medium text-slate-500 underline decoration-slate-300 underline-offset-4 transition hover:text-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:decoration-slate-600 dark:hover:text-slate-200 dark:focus-visible:outline-marca-300"
       >
         {metodoConsulta === 'email'
           ? 'Consultar por nombre de usuario'
@@ -139,7 +139,7 @@ export default function Cuenta() {
             {tieneRol('USER') ? (
               <Link
                 to={RUTAS.misTickets}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -161,7 +161,7 @@ export default function Cuenta() {
             <button
               type="button"
               onClick={() => cerrarSesion()}
-              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100"
+              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 bg-white px-4 py-2 font-semibold text-slate-800 transition hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:focus-visible:outline-marca-300"
             >
               Cerrar sesión
             </button>

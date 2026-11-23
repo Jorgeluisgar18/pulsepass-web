@@ -13,14 +13,14 @@ export default function Footer() {
                 >
                     <Link
                         to={RUTAS.sedes}
-                        className="rounded hover:text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                        className="rounded hover:text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
                     >
                         Sedes
                     </Link>
 
                     <Link
                         to={RUTAS.artistas}
-                        className="rounded hover:text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                        className="rounded hover:text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
                     >
                         Artistas
                     </Link>
