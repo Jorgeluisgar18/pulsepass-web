@@ -14,6 +14,7 @@ describe('ErrorPagina', () => {
                         throw new Error('DETALLE_INTERNO_NO_DEBE_MOSTRARSE')
                     },
                     element: <div />,
+                    HydrateFallback: () => <div>Cargando prueba</div>,
                     errorElement: <ErrorPagina />,
                 },
             ],

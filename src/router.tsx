@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router'
 import type { RouteObject } from 'react-router'
+import CargandoRuta from "./layouts/CargandoRuta";
 import Layout from './layouts/Layout'
 import { PATRONES_RUTA } from './lib/rutas'
 import ErrorPagina from './pages/ErrorPagina'
@@ -9,6 +10,7 @@ export const rutasAplicacion: RouteObject[] = [
     {
         path: '/',
         Component: Layout,
+        HydrateFallback: CargandoRuta,
         errorElement: <ErrorPagina />,
         children: [
             {
