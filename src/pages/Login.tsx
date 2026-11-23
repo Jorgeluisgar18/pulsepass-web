@@ -188,7 +188,7 @@ export default function Login() {
                 }
                 onClick={() => setMostrarPassword((prev) => !prev)}
                 aria-pressed={mostrarPassword}
-                className="absolute right-0 top-7 flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:hover:text-slate-200"
+                className="absolute right-0 top-7 flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:hover:text-slate-200 dark:focus-visible:outline-marca-300"
               >
                 {mostrarPassword ? (
                   <svg
@@ -242,7 +242,7 @@ export default function Login() {
           ¿No tienes una cuenta?{' '}
           <Link
             to={RUTAS.registro}
-            className="font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-400"
+            className="font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-400 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
           >
             Regístrate
           </Link>

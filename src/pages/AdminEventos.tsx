@@ -1,4 +1,7 @@
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 import { Link } from 'react-router'
 import Badge from '../componentes/Badge'
 import Boton from '../componentes/Boton'
@@ -12,6 +15,11 @@ import {
 import { ApiError } from '../lib/http'
 import { RUTAS } from '../lib/rutas'
 import type { EstadoEvento } from '../funcionalidades/eventos/tipos'
+
+const busquedaEventoSchema = z.object({
+  codigo: z.string().trim().min(1, 'Ingresa el código del evento.'),
+})
+type BusquedaEvento = z.infer<typeof busquedaEventoSchema>
 
 const etiquetasEstado: Record<EstadoEvento, string> = {
   DRAFT: 'Borrador',
@@ -33,22 +41,16 @@ function mensajeErrorBusqueda(error: unknown) {
 }
 
 export default function AdminEventos() {
-  const [codigo, setCodigo] = useState('')
   const [codigoBuscado, setCodigoBuscado] = useState('')
-  const [errorCodigo, setErrorCodigo] = useState('')
+  const { register, handleSubmit, formState: { errors } } = useForm<BusquedaEvento>({
+    resolver: zodResolver(busquedaEventoSchema),
+    defaultValues: { codigo: '' },
+  })
   const eventosCreados = useEventosCreadosDeSesion()
   const consultaEvento = useBuscarEventoAdmin(codigoBuscado, Boolean(codigoBuscado))
 
-  function buscarEvento(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+  function buscarEvento({ codigo }: BusquedaEvento) {
     const codigoNormalizado = codigo.trim()
-    if (!codigoNormalizado) {
-      setErrorCodigo('Ingresa el código del evento.')
-      setCodigoBuscado('')
-      return
-    }
-
-    setErrorCodigo('')
     if (codigoNormalizado === codigoBuscado) {
       void consultaEvento.refetch()
       return
@@ -63,7 +65,7 @@ export default function AdminEventos() {
     <div className="mx-auto max-w-6xl space-y-8 px-4 py-8 sm:py-12">
       <header className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-sm font-semibold text-marca-600">PulsePass</p>
+          <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">PulsePass</p>
           <h1 className="mt-2 font-titulo text-3xl font-bold text-slate-900 dark:text-slate-100">
             Administración de eventos
           </h1>
@@ -73,7 +75,7 @@ export default function AdminEventos() {
         </div>
         <Link
           to={RUTAS.adminNuevoEvento}
-          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+          className="inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300"
         >
           Crear evento
         </Link>
@@ -86,14 +88,13 @@ export default function AdminEventos() {
         <h2 id="buscar-evento-titulo" className="font-titulo text-xl font-bold text-slate-900 dark:text-slate-100">
           Buscar evento
         </h2>
-        <form onSubmit={buscarEvento} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end">
+        <form onSubmit={handleSubmit(buscarEvento, () => setCodigoBuscado(''))} className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-end">
           <div className="min-w-0 flex-1">
             <Campo
               etiqueta="Código del evento"
-              value={codigo}
-              onChange={(event) => setCodigo(event.target.value)}
-              error={errorCodigo}
               autoComplete="off"
+              error={errors.codigo?.message}
+              {...register('codigo')}
             />
           </div>
           <Boton type="submit" cargando={consultaEvento.isFetching}>
@@ -129,7 +130,7 @@ export default function AdminEventos() {
             </div>
             <Link
               to={RUTAS.adminEvento(evento.eventCode)}
-              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+              className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
             >
               Gestionar evento
             </Link>
@@ -155,7 +156,7 @@ export default function AdminEventos() {
               <li key={eventoCreado.eventCode}>
                 <Link
                   to={RUTAS.adminEvento(eventoCreado.eventCode)}
-                  className="block rounded-lg border border-slate-200 p-4 hover:border-marca-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700"
+                  className="block rounded-lg border border-slate-200 p-4 hover:border-marca-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:focus-visible:outline-marca-300"
                 >
                   <span className="block font-semibold text-slate-900 dark:text-slate-100">{eventoCreado.name}</span>
                   <span className="mt-1 block break-all text-sm text-slate-600 dark:text-slate-400">

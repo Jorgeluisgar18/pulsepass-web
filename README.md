@@ -180,34 +180,23 @@ La estructura se completa de forma incremental conforme avanza la implementació
 
 ## Estado actual
 
-Implementado:
+**MVP frontend implementado:**
 
-- Proyecto Vite + React + TypeScript
-- TypeScript estricto
-- Tailwind CSS v4
-- Proxy de desarrollo hacia la API
-- Componentes UI base
-- Infraestructura inicial de pruebas
-- Layout base
-- Navbar responsive inicial
-- Footer
-- Páginas base del mapa de navegación
-- Páginas 403 y 404
+- Mapa de rutas con lazy loading, vistas 403/404 y navegación por rol.
+- Inicio, cartelera con filtros y detalles de eventos, artistas y sedes.
+- Registro, login JWT, restauración de sesión, perfil propio y guardas de autorización.
+- USER: selección y compra de tickets, confirmación, lista, detalle y cancelación.
+- STAFF: validación de ingreso y consulta de tickets pagados por evento.
+- ADMIN: búsqueda, creación, publicación de eventos y asociación de artistas.
+- Integración HTTP con validación Zod, manejo de estados y errores de la API.
+- Pruebas unitarias y de interacción con Vitest, Testing Library y MSW.
+- Diseño responsive y modo oscuro automático según la preferencia del dispositivo.
 
-Pendiente:
+**Limitaciones conocidas:**
 
-- Router completo
-- Cliente HTTP
-- Contratos zod de la API
-- Catálogo público
-- Autenticación y guardas
-- Tickets USER
-- Operaciones STAFF
-- Administración ADMIN
-- Integración final
-- Accesibilidad y responsive finales
-- Modo oscuro completo
-
+- El backend no proporciona un listado administrativo completo de eventos: se permite la búsqueda por código y se mantiene una lista de los eventos creados durante la sesión.
+- No se incluye pasarela de pago real ni QR, fuera del alcance obligatorio del PRD.
+- La conformidad total WCAG AA y la meta Lighthouse Performance de Inicio requieren mediciones finales con axe/Lighthouse y revisión manual. No se declaran certificadas por las pruebas unitarias.
 ## Calidad
 
 Antes de integrar un cambio se deben ejecutar:

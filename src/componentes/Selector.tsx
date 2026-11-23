@@ -43,7 +43,7 @@ export default function Selector({
             </select>
 
             {error && (
-                <p id={errorId} className="text-sm text-red-600" role="alert">
+                <p id={errorId} className="text-sm text-red-600 dark:text-red-300" role="alert">
                     {error}
                 </p>
             )}

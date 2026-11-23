@@ -34,7 +34,7 @@ export default function TarjetaEvento({ evento }: TarjetaEventoProps) {
   return (
     <Link
       to={RUTAS.evento(evento.eventCode)}
-      className="group focus-visible:outline-marca-600 block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 dark:border-slate-800 dark:bg-slate-900"
+      className="group focus-visible:outline-marca-600 block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-4 dark:border-slate-800 dark:bg-slate-900 dark:focus-visible:outline-marca-300"
     >
       <div
         aria-hidden="true"

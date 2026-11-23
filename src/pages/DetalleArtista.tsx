@@ -65,7 +65,7 @@ export default function DetalleArtista() {
     <div className="mx-auto max-w-6xl px-4 py-8">
       <Link
         to={RUTAS.artistas}
-        className="text-marca-600 hover:text-marca-700 focus-visible:outline-marca-600 inline-flex min-h-11 items-center rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="text-marca-600 hover:text-marca-700 focus-visible:outline-marca-600 inline-flex min-h-11 items-center rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 dark:text-marca-300 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
       >
         ← Artistas
       </Link>

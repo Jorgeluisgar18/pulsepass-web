@@ -35,7 +35,7 @@ export default function ListaArtistasEvento({
             <Link
               key={artista.id}
               to={RUTAS.artista(artista.id)}
-              className="hover:text-marca-700 focus-visible:outline-marca-600 flex min-h-11 items-center gap-2 rounded-full px-2 py-1 font-semibold text-slate-700 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:text-slate-200 dark:hover:bg-slate-800"
+              className="hover:text-marca-700 focus-visible:outline-marca-600 flex min-h-11 items-center gap-2 rounded-full px-2 py-1 font-semibold text-slate-700 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
             >
               <span
                 aria-hidden="true"

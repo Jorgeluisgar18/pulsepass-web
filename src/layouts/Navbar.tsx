@@ -40,7 +40,7 @@ export default function Navbar() {
                         to={RUTAS.inicio}
                         end
                         onClick={cerrarMenu}
-                        className="flex items-center gap-2 rounded-md font-titulo text-xl font-bold text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-600"
+                        className="flex items-center gap-2 rounded-md font-titulo text-xl font-bold text-marca-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-600 dark:text-marca-300 dark:focus-visible:outline-marca-300"
                     >
                         <svg
                             viewBox="0 0 24 24"
@@ -136,7 +136,7 @@ export default function Navbar() {
                                 <button
                                     type="button"
                                     onClick={() => cerrarSesion()}
-                                    className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+                                    className="rounded-md px-3 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-100 dark:focus-visible:outline-marca-300"
                                 >
                                     Cerrar sesión
                                 </button>
@@ -154,7 +154,7 @@ export default function Navbar() {
 
                                 <NavLink
                                     to={RUTAS.registro}
-                                    className="ml-1 inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                                    className="ml-1 inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300"
                                 >
                                     Registrarse
                                 </NavLink>
@@ -168,7 +168,7 @@ export default function Navbar() {
                         aria-expanded={menuAbierto}
                         aria-controls="menu-movil"
                         onClick={() => setMenuAbierto((abierto) => !abierto)}
-                        className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 lg:hidden dark:text-slate-200 dark:hover:bg-slate-800"
+                        className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 lg:hidden dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
                     >
                         {menuAbierto ? (
                             <svg

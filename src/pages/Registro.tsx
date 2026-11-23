@@ -226,7 +226,7 @@ export default function Registro() {
                 }
                 onClick={() => setMostrarPassword((prev) => !prev)}
                 aria-pressed={mostrarPassword}
-                className="absolute right-0 top-7 flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:hover:text-slate-200"
+                className="absolute right-0 top-7 flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-500 hover:text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-400 dark:hover:text-slate-200 dark:focus-visible:outline-marca-300"
               >
                 {mostrarPassword ? (
                   <svg
@@ -288,7 +288,7 @@ export default function Registro() {
           </div>
 
           <details open={errors.phone || errors.city ? true : undefined} className="text-sm text-slate-600 dark:text-slate-300">
-            <summary className="min-h-11 cursor-pointer rounded-lg py-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600">
+            <summary className="min-h-11 cursor-pointer rounded-lg py-3 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300">
               Datos de contacto (opcional)
             </summary>
             <div className="mt-3 space-y-5">
@@ -314,7 +314,7 @@ export default function Registro() {
           ¿Ya tienes una cuenta?{' '}
           <Link
             to={RUTAS.login}
-            className="font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-400"
+            className="font-semibold text-marca-600 hover:text-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-marca-400 dark:hover:text-marca-200 dark:focus-visible:outline-marca-300"
           >
             Inicia sesión
           </Link>

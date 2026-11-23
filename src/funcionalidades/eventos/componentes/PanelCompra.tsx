@@ -69,7 +69,7 @@ function AccionCompra({
       state={{
         desde: RUTAS.evento(eventCode),
       }}
-      className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+      className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-marca-600 px-4 py-2 font-semibold text-white transition hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300"
     >
       Inicia sesión para comprar
     </Link>
@@ -184,7 +184,7 @@ export default function PanelCompra({
               <option value="STUDENT">Estudiante</option>
             </select>
             {formulario.formState.errors.type && (
-              <p id="tipo-entrada-error" role="alert" className="text-sm text-red-600">
+              <p id="tipo-entrada-error" role="alert" className="text-sm text-red-600 dark:text-red-300">
                 {formulario.formState.errors.type.message}
               </p>
             )}

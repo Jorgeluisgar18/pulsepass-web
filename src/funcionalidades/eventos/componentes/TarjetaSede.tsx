@@ -15,12 +15,12 @@ export default function TarjetaSede({ code, name }: TarjetaSedeProps) {
 
       <Link
         to={RUTAS.sede(code)}
-        className="hover:border-marca-500 hover:bg-marca-50 focus-visible:outline-marca-600 mt-4 flex min-h-16 items-center gap-3 rounded-xl border border-slate-200 p-4 transition focus-visible:outline-2 focus-visible:outline-offset-2 dark:border-slate-700 dark:hover:bg-slate-800"
+        className="hover:border-marca-500 hover:bg-marca-50 focus-visible:outline-marca-600 mt-4 flex min-h-16 items-center gap-3 rounded-xl border border-slate-200 p-4 transition focus-visible:outline-2 focus-visible:outline-offset-2 dark:border-slate-700 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
       >
         <svg
           viewBox="0 0 24 24"
           aria-hidden="true"
-          className="text-marca-600 h-6 w-6 shrink-0"
+          className="text-marca-600 h-6 w-6 shrink-0 dark:text-marca-300"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.8"

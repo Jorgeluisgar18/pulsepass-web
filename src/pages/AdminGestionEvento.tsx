@@ -70,7 +70,7 @@ export default function AdminGestionEvento() {
     <div className="mx-auto max-w-6xl space-y-8 px-4 py-8 sm:py-12">
       <header className="flex flex-col gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-sm font-semibold text-marca-600">PulsePass</p>
+          <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">PulsePass</p>
           <h1 className="mt-2 font-titulo text-3xl font-bold text-slate-900 dark:text-slate-100">
             Gestionar evento
           </h1>
@@ -79,14 +79,14 @@ export default function AdminGestionEvento() {
         <div className="flex flex-col gap-3 sm:items-end">
           <Link
             to={RUTAS.adminEventos}
-            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+            className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
           >
             Volver a eventos
           </Link>
           {evento && (
             <Link
               to={RUTAS.staffTicketsEvento(evento.eventCode)}
-              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800"
+              className="inline-flex min-h-11 items-center justify-center rounded-lg border border-slate-300 px-4 py-2 font-semibold text-slate-800 hover:bg-slate-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
             >
               Ver tickets pagados
             </Link>

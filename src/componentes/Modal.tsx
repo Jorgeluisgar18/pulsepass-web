@@ -94,7 +94,7 @@ export default function Modal({
                         type="button"
                         onClick={onCerrar}
                         aria-label="Cerrar"
-                        className="min-h-11 min-w-11 rounded-lg text-slate-500 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-marca-600 dark:hover:bg-slate-800"
+                        className="min-h-11 min-w-11 rounded-lg text-slate-500 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-marca-600 dark:hover:bg-slate-800 dark:text-slate-300 dark:focus-visible:outline-marca-300"
                     >
                         ×
                     </button>

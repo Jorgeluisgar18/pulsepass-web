@@ -111,7 +111,7 @@ export default function DetalleTicket() {
 
       <article className="space-y-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7 dark:border-slate-800 dark:bg-slate-900">
         <header className="space-y-2">
-          <p className="text-sm font-semibold text-marca-600">Detalle del ticket</p>
+          <p className="text-sm font-semibold text-marca-600 dark:text-marca-300">Detalle del ticket</p>
           <h1 className="font-titulo text-2xl font-bold text-slate-900 sm:text-3xl dark:text-slate-100">
             {ticket.eventName}
           </h1>

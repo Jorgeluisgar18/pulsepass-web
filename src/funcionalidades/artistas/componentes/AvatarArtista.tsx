@@ -11,7 +11,7 @@ export default function AvatarArtista({ artista }: AvatarArtistaProps) {
   return (
     <Link
       to={RUTAS.artista(artista.id)}
-      className="group focus-visible:outline-marca-600 flex min-w-0 items-center gap-3 rounded-xl p-2 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:bg-slate-800"
+      className="group focus-visible:outline-marca-600 flex min-w-0 items-center gap-3 rounded-xl p-2 transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
     >
       <AvatarInicialesArtista stageName={artista.stageName} />
 

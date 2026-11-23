@@ -42,7 +42,7 @@ export default function ErrorPagina() {
 
                     <Link
                         to={RUTAS.inicio}
-                        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-5 py-3 font-semibold text-white hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600"
+                        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-marca-600 px-5 py-3 font-semibold text-white hover:bg-marca-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:focus-visible:outline-marca-300"
                     >
                         Volver al inicio
                     </Link>
