@@ -1,0 +1,647 @@
+{
+  "date": "2026-11-23T20:57:13.573Z",
+  "method": "All32 embedded references and33 refreshed browser captures inspected through labeled contact sheets. No pixel-identity claim.",
+  "realWrites": 0,
+  "references": [
+    {
+      "id": 1,
+      "reference": "Main.png",
+      "prdPage": 21,
+      "xref": 135,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p21-xref135.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/01-main.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Hero degradado y dos CTA, eventos y artistas presentes. Eyebrow añadido, hero más alto y artistas en dos filas por cinco registros; diferencias de contenido aceptables. Paneles sin iconos en la captura actual del servicio4173.",
+      "recommendedAction": "Mantener jerarquía y alinear iconosSVG de tarjetas a DES-01/02.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-01/02 p14; DES-11 p15",
+      "proposedDisposition": "Panel con icono obligatorio; verificar corrección aprobada tras build. Altura/datos son adaptación."
+    },
+    {
+      "id": 2,
+      "reference": "Catalogo.png",
+      "prdPage": 24,
+      "xref": 143,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p24-xref143.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/02-catalogo.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Tres filtros, limpiar, contador y rejilla3 presentes. Badge de estado junto al título y categoría en panel; referencia sitúa categoría en cuerpo y estado debajo de ubicación. Nueve eventos reales frente a seis de referencia.",
+      "recommendedAction": "Añadir iconosSVG de tarjetas y decidir ubicación de badges según referencia.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-01/02 p14;9.4 p25",
+      "proposedDisposition": "Icono de categoría obligatorio; tres columnas/filtros se conservan. Badgesubicación es diferencia de diseño vinculante."
+    },
+    {
+      "id": 3,
+      "reference": "DetalleEvento.png",
+      "prdPage": 25,
+      "xref": 147,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p25-xref147.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/03-detalle-evento.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Cabecera con icono, título, datos, artistas y sede más compra lateral presentes. El panel usa select y CTA antes del selector, frente a cuatro opciones radio y CTA inferior. Sede no expone ciudad/capacidad en tarjeta.",
+      "recommendedAction": "Alinear selector de tickets y metadatos de sede si los contratos disponibles lo permiten.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.5 p29 + imagenp25",
+      "proposedDisposition": "Selectorselect conserva contrato y validacióntype; radios son referencia visual vinculante, por eso PARCIAL hasta aceptación docente."
+    },
+    {
+      "id": 4,
+      "reference": "ModalCompra.png",
+      "prdPage": 26,
+      "xref": 150,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p26-xref150.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/04-modal-compra.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Modal centrado con evento/tipo/cuenta y acciones; referencia ordena datos como filas separadas, app combina tipo y cuenta en columnas y dice Confirmar compra/Volver. Captura es estado previo, referencia muestra error de edad.",
+      "recommendedAction": "La comparación de error exacto requiere estado controlado adicional; mantener modalidad y foco.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-10 p15;9.5 p29",
+      "proposedDisposition": "409 debe permanecer en modal con fondo rojo claro,SVGadvertencia y alert; captura actualsinerror no verifica ese criterio."
+    },
+    {
+      "id": 5,
+      "reference": "Artistas.png",
+      "prdPage": 29,
+      "xref": 158,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p29-xref158.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/05-artistas.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Tarjetas de iniciales y nombre presentes; cuatro columnas frente a tres de referencia. Género ausente porque datos actuales carecen de él; cinco artistas frente a tres es variación del conjunto de datos.",
+      "recommendedAction": "No fabricar género; verificar si el grid exigido es tres columnas.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 6,
+      "reference": "DetalleArtista.png",
+      "prdPage": 30,
+      "xref": 161,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p30-xref161.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/06-detalle-artista.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Avatar, nombre y activo presentes; descriptor de género no disponible. Solar Beat sin eventos refleja asociación real con otro artista, no fallo visual. Referencia muestra una tarjeta de evento.",
+      "recommendedAction": "Añadir evidencia equivalente de artista asociado sin inventar información.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 7,
+      "reference": "Sedes.png",
+      "prdPage": 31,
+      "xref": 164,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p31-xref164.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/07-sedes.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "CUMPLE",
+      "observedDifferences": "Rejilla de tarjetas con nombre, activa, ciudad y capacidad, tres columnas. Cuarta sede en segunda fila es variación de datos.",
+      "recommendedAction": "Conservar.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar: estructura e información observadas satisfacen referencia con variaciones de datos documentadas."
+    },
+    {
+      "id": 8,
+      "reference": "DetalleSede.png",
+      "prdPage": 31,
+      "xref": 165,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p31-xref165.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/08-detalle-sede.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "CUMPLE",
+      "observedDifferences": "Tarjeta centrada y filas código/ciudad/capacidad/estado coinciden. Dirección adicional proviene del DTO y mejora información; datos y anchura difieren sin pérdida de estructura.",
+      "recommendedAction": "Conservar.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar: estructura e información observadas satisfacen referencia con variaciones de datos documentadas."
+    },
+    {
+      "id": 9,
+      "reference": "Login.png",
+      "prdPage": 32,
+      "xref": 168,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p32-xref168.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/09-login.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Formulario centrado con emblema, dos campos, visibilidad de contraseña y CTA. Referencia representa credenciales inválidas; captura disponible es inicial, no acredita ese estado visual.",
+      "recommendedAction": "Comparar error de login explícitamente.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 10,
+      "reference": "Registro.png",
+      "prdPage": 33,
+      "xref": 171,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p33-xref171.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/10-registro.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "CUMPLE",
+      "observedDifferences": "Tarjeta centrada, email/username/nombres/fecha/contraseña y CTA presentes. Datos de contacto opcionales están colapsados; medidor vacío corresponde a contraseña vacía y referencia lo muestra rellenado.",
+      "recommendedAction": "Conservar diferencias de estado documentadas.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar: estructura e información observadas satisfacen referencia con variaciones de datos documentadas."
+    },
+    {
+      "id": 11,
+      "reference": "Cuenta.png",
+      "prdPage": 34,
+      "xref": 174,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p34-xref174.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/11-cuenta.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "CUMPLE",
+      "observedDifferences": "Título, avatar, identidad, roles/activo, tickets y logout presentes. Consulta por username adicional corresponde a cobertura aprobada; distribución email en línea propia es adaptación legible.",
+      "recommendedAction": "Conservar.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar: estructura e información observadas satisfacen referencia con variaciones de datos documentadas."
+    },
+    {
+      "id": 12,
+      "reference": "MisTickets.png",
+      "prdPage": 35,
+      "xref": 177,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p35-xref177.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/12-mis-tickets.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Filtros y estados presentes pero desktop usa tabla, mientras referencia muestra tarjetas verticales con Ver detalle y Cancelar. Código enlazado sustituye enlace Ver detalle.",
+      "recommendedAction": "Confirmar aceptación docente o alinear listado visual a tarjetas.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.11 p36 TarjetaTicket + imagenp35",
+      "proposedDisposition": "Tabla desktop difiere de tarjetas especificadas también como componente; requiere alineación o aceptación explícita, aunque filtros/accionesfuncionen."
+    },
+    {
+      "id": 13,
+      "reference": "ModalCancelar.png",
+      "prdPage": 35,
+      "xref": 178,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p35-xref178.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/13-modal-cancelar-409.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "controlled browser mock",
+      "status": "PARCIAL",
+      "observedDifferences": "Modal, acciones y error409 visibles. Texto de error rojo plano frente a caja roja con icono; se abre sobre detalle, no listado (ambas rutas legítimas).",
+      "recommendedAction": "Alinear feedback visual del error y conservar alert.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-10 p15",
+      "proposedDisposition": "Fondo rojo claro e icono advertencia son explícitos: errorrojo plano no basta visualmente."
+    },
+    {
+      "id": 14,
+      "reference": "DetalleTicket.png",
+      "prdPage": 36,
+      "xref": 181,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p36-xref181.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/14-detalle-ticket.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Código copiable, tipo, precio, fecha y estado presentes. App usa dos columnas e ID/eventCode/email frente a filas y titular de la referencia; CTA dentro de tarjeta frente a externo.",
+      "recommendedAction": "No inventar titular sin DTO; alinear filas y jerarquía si se exige equivalencia estricta.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 15,
+      "reference": "Confirmacion.png",
+      "prdPage": 37,
+      "xref": 184,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p37-xref184.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/15-confirmacion.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Confirmación, estado, evento, código y dos rutas presentes. Falta gran círculo verde con check y centrado; app presenta ficha de dos columnas.",
+      "recommendedAction": "Añadir SVG de éxito y composición centrada según referencia.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 16,
+      "reference": "Validacion.png",
+      "prdPage": 38,
+      "xref": 187,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p38-xref187.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/16-validacion.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "STAFF",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Búsqueda y tarjetaPAID con acción existentes. App muestra ficha extensa y CTA estrecho, referencia resumen corto y CTA ancho. Titular es email porque DTO no contiene nombre.",
+      "recommendedAction": "Alinear densidad y anchura de acción sin inventar nombre.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.14 p39",
+      "proposedDisposition": "Resultado grande/alto contraste y Enter/foco son obligatorios. Más datos no violan por sí mismos el comportamiento."
+    },
+    {
+      "id": 17,
+      "reference": "ValidacionExito.png",
+      "prdPage": 38,
+      "xref": 188,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p38-xref188.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/17-validacion-exito.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "STAFF",
+      "api": "controlled browser mock",
+      "status": "PARCIAL",
+      "observedDifferences": "Mock coherente de PATCH y GET muestra USED, retira acción y conserva aviso verde de éxito. Mensaje aparece arriba y ficha más extensa frente a aviso inferior de la referencia.",
+      "recommendedAction": "Conservar consistencia y considerar posición del aviso solo si se exige equivalencia literal.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.14 p39",
+      "proposedDisposition": "200 exige éxito y USED; captura mock coherente lo muestra. Campo debe limpiarse tras éxito; captura conserva código => brecha explícita."
+    },
+    {
+      "id": 18,
+      "reference": "ValidacionYaUsado.png",
+      "prdPage": 39,
+      "xref": 191,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p39-xref191.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/18-validacion-409.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "STAFF",
+      "api": "controlled browser mock",
+      "status": "PARCIAL",
+      "observedDifferences": "Error409 visible en rojo bajo botón; referencia aviso ámbar exterior con USED. Mock solo negó mutación y no cambió GETPAID; no deducir error de sincronía real.",
+      "recommendedAction": "Alinear aviso409 ámbar y obtener estadoUSED coherente.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.14 p39",
+      "proposedDisposition": "409 exige mensaje en tono advertencia. Texto rojoactual requiere revisión frente a ámbar y contenido delbackend."
+    },
+    {
+      "id": 19,
+      "reference": "TicketsPagados.png",
+      "prdPage": 40,
+      "xref": 194,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p40-xref194.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/19-pagados.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "STAFF",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Consulta y tabla existen; app añade evento,fecha/email, botones incluyen códigos largos y ocupan varias líneas. Referencia acción compacta Usar y total visible.",
+      "recommendedAction": "Separar nombre accesible completo del texto visual corto de botón.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.15 p41",
+      "proposedDisposition": "Tabla genérica y acción reutilizada requeridas y presentes. Códigovisible en botón es densidad estética si no hayoverflow; referencia muestraUsar corto."
+    },
+    {
+      "id": 20,
+      "reference": "AdminEventos.png",
+      "prdPage": 42,
+      "xref": 200,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p42-xref200.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/20-admin-eventos.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "ADMIN",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Búsqueda, crear y relación local presentes. Tres tarjetas/cabecera adicionales frente a composición compacta; no se ve notaGAP-01 de la referencia. Listado vacío es sesión nueva, no falta de persistencia.",
+      "recommendedAction": "Añadir aviso de ausencia de listado completo y alinear columna estrecha.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-04 p15;9.16 p42",
+      "proposedDisposition": "Columnaestrecha y relaciónlocal son requisitos. Separar tarjetas no esfallofuncional; notaGAP01 falta frente a imagen y texto."
+    },
+    {
+      "id": 21,
+      "reference": "AdminCrear.png",
+      "prdPage": 43,
+      "xref": 203,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p43-xref203.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/21-admin-crear.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "ADMIN",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Campos y contador0/500 presentes. Formulario dos columnas para código/nombre y otros pares, cabecera tarjeta separada y acciones a izquierda; referencia primera parte una columna, Cancelar y Crear a derecha.",
+      "recommendedAction": "Alinear grid, backlink y acciones sin alterar contrato500.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-04 p15;9.17 p43",
+      "proposedDisposition": "Columnaestrecha y campos/500 presentes; griddoscolumnas difiere deimagen vinculante. No cambiarcontratopara imitarformato."
+    },
+    {
+      "id": 22,
+      "reference": "AdminGestion.png",
+      "prdPage": 44,
+      "xref": 206,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p44-xref206.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/22-admin-gestion.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "ADMIN",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Publicación y artistas presentes. App cabeceraGestionar+ficha con más datos y artista en columnas, referencia cabecera evento compacta y secciones apiladas; metadatos fecha en ISO en app.",
+      "recommendedAction": "Formatear fecha y reducir cabecera según referencia.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.18 p44",
+      "proposedDisposition": "Publicar conmodal y bloqueoartistasasociados son comportamiento vinculante. Densidad/fechaISO difieren deldiseño pero no pruebanregresión."
+    },
+    {
+      "id": 23,
+      "reference": "Errores.png",
+      "prdPage": 45,
+      "xref": 209,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p45-xref209.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/23-404.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "404 real muestra número, explicación y volver. Referencia es lámina compuesta403/404/errorruta; no existe ruta galería obligatoria. Esta comparación no cubre403/errorruta en la captura actual.",
+      "recommendedAction": "Enlazar evidencias independientes de403 y errorruta.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar datos reales y adaptación legible; mantener estado visual actual hasta comparación equivalente del estado específico."
+    },
+    {
+      "id": 24,
+      "reference": "Estados.png",
+      "prdPage": 46,
+      "xref": 212,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p46-xref212.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/24-estado-vacio.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "controlled browser mock",
+      "status": "PARCIAL",
+      "observedDifferences": "Vacío con título/texto visible pero sin icono/caja/acción de referencia. Capturaestado-error final muestra explicación y Reintentar; app usa mensaje centrado sin caja/icono del diseño.",
+      "recommendedAction": "Revisar icono/acción del vacío y caja visual de error.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.20 p46",
+      "proposedDisposition": "Vacío exige icono,mensaje,acciónsugerida; captura solo mensaje/texto=>brechaexplícita. Errorrequiere mensaje+Reintentar y los tiene."
+    },
+    {
+      "id": 25,
+      "reference": "Sistema.png",
+      "prdPage": 16,
+      "xref": 118,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p16-xref118.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/21-admin-crear.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "ADMIN",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Referencia es galería de tokens/componentes, sin ruta exigida. Pantallas reales muestran tipografía, marca, bordes y campos, pero una sola captura no acredita todos los badges/variantes de botón.",
+      "recommendedAction": "Usar mediciones de tokens y componentes; no crear ruta de producto ficticia.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.1 p15–18",
+      "proposedDisposition": "No hayrutaSistema exigida. Tokens y variantes se verifican porcomponentes/mediciones; no inventargalería."
+    },
+    {
+      "id": 26,
+      "reference": "MovilMenuCerrado.png",
+      "prdPage": 19,
+      "xref": 128,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p19-xref128.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/26-menu-cerrado.png",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "CUMPLE",
+      "observedDifferences": "Cabecera con marca/hamburguesa, hero y dosCTA a390px, sin desbordamiento. Diferencia altura por texto/espaciado y contenido debajo del hero.",
+      "recommendedAction": "Conservar.",
+      "visuallyInspected": true,
+      "normativeBasis": "Sección9 / referencia citada",
+      "proposedDisposition": "Conservar: estructura e información observadas satisfacen referencia con variaciones de datos documentadas."
+    },
+    {
+      "id": 27,
+      "reference": "MovilMenuAbierto.png",
+      "prdPage": 19,
+      "xref": 129,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p19-xref129.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/27-menu-abierto.png",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Navegación desplegada con cierre y enlaces; accionesIngresar/Registrarse como enlaces verticales frente a botones en fila. No overlayfullscreen en referencia ni en app.",
+      "recommendedAction": "Alinear estilo y fila de acciones móviles.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.2 imagenp19",
+      "proposedDisposition": "Enlaces/acciones accesibles y menúoperable; dosbotonesenfila esreferenciavisual, cambioverticalrequiere aceptacióncomo adaptación."
+    },
+    {
+      "id": 28,
+      "reference": "MovilInicio.png",
+      "prdPage": 22,
+      "xref": 138,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p22-xref138.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/28-inicio-movil.png",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Hero, tres eventos apilados y artistas presentes; mayor espacio vertical y paneles con gradiente intenso en captura. Contenido cinco artistas real permitido.",
+      "recommendedAction": "Comprobar iconos finales y armonizar espaciado si se exige equivalencia.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-01/02 p14;9.3 p22",
+      "proposedDisposition": "Iconoscategoría obligatorios; diferenciasdatos y alturasonadaptación."
+    },
+    {
+      "id": 29,
+      "reference": "MovilEvento.png",
+      "prdPage": 27,
+      "xref": 153,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p27-xref153.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/29-evento-movil.png",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "role": "USER_A",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Detalle apilado con barra compra móvil presente en captura pero visualmente situada entre detalle y panel; referencia barra fija inferior y radios. CTA se repite en panel.",
+      "recommendedAction": "Comprobar positionfixed en viewport normal y alinear opcionesradio.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-07 p15;9.5 p29",
+      "proposedDisposition": "Barra inferior fixed solo<md conrelleno esexplícita; screenshotfullpage no pruebageometríaviewport. Selectvsradios solo imagen."
+    },
+    {
+      "id": 30,
+      "reference": "MovilPagados.png",
+      "prdPage": 41,
+      "xref": 197,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p41-xref197.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/30-pagados-movil.png",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "role": "STAFF",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Tabla se transforma en tarjetas con acción. App mucho más extensa por metadatos y código completo dentro del botón; referencia tarjetas concisas con Usar.",
+      "recommendedAction": "Acortar texto visible y mantener aria-label completo.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.15 p42",
+      "proposedDisposition": "Transformación tabla→tarjetas explícita ypresente. Metadatosadicionales sonadaptación si legiblesysinoverflow."
+    },
+    {
+      "id": 31,
+      "reference": "CatalogoOscuro.png",
+      "prdPage": 17,
+      "xref": 122,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p17-xref122.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/31-catalogo-oscuro.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Fondo oscuro, tarjetas y controles legibles. Captura paneles muy saturados y badge superior frente a tintes oscuros/iconos referencia. En el servicio4173 inspeccionado todavía no aparecen iconosSVG de categoría en tarjetas.",
+      "recommendedAction": "Alinear tarjetas del servicio4173 con iconos y tintes de referencia.",
+      "visuallyInspected": true,
+      "normativeBasis": "DES-01/02 p14;9.1 p17",
+      "proposedDisposition": "Icono y colorcategoríaoscuro requeridos; validar buildfinaldespués delcardfix."
+    },
+    {
+      "id": 32,
+      "reference": "DetalleOscuro.png",
+      "prdPage": 17,
+      "xref": 123,
+      "referenceFile": "docs\\entrega-fase5\\evidencias\\09-conformidad-visual\\referencias\\p17-xref123.png",
+      "actualCapture": "docs/entrega-fase5/evidencias/09-conformidad-visual/32-detalle-oscuro.png",
+      "viewport": {
+        "width": 1280,
+        "height": 1000
+      },
+      "role": "PUBLIC",
+      "api": "real read-only",
+      "status": "PARCIAL",
+      "observedDifferences": "Panel musical y superficies oscuras presentes. Visitante ve login en compra frente a USER con opciones; diferencia de rol válida. La captura actual muestra etiqueta clara; la evaluación numérica WCAG corresponde al loteaxe separado.",
+      "recommendedAction": "Documentar diferencia de rol y mantener medición de contraste separada.",
+      "visuallyInspected": true,
+      "normativeBasis": "9.1 p17;9.5 p29",
+      "proposedDisposition": "Captura PUBLIC difiere de referenciaUSER: aceptableporrol, pero no valida selectorUSERoscuro. Medicióncontrasteindependiente."
+    }
+  ]
+}

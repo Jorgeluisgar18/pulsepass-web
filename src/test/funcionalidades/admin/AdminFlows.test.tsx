@@ -10,6 +10,7 @@ import RutaPorRol from '../../../funcionalidades/auth/componentes/RutaPorRol'
 import type { Rol } from '../../../funcionalidades/auth/tipos'
 import type { Evento } from '../../../funcionalidades/eventos/tipos'
 import AdminCrearEvento from '../../../pages/AdminCrearEvento'
+import CatalogoEventos from '../../../pages/CatalogoEventos'
 import AdminEventos from '../../../pages/AdminEventos'
 import AdminGestionEvento from '../../../pages/AdminGestionEvento'
 import { server } from '../../mocks/server'
@@ -112,6 +113,7 @@ function renderAdmin(rutaInicial: string, roles: Rol[] = ['ADMIN']) {
               { path: 'admin/eventos/:eventCode', element: <AdminGestionEvento /> },
             ],
           },
+          { path: 'eventos', element: <CatalogoEventos /> },
           { path: '403', element: <div>Sin permisos</div> },
           { path: 'staff/eventos/:eventCode/tickets', element: <div>Tickets pagados</div> },
         ],
@@ -231,6 +233,8 @@ describe('flujos ADMIN de eventos', () => {
 
     await user.click(screen.getByRole('button', { name: 'Crear evento' }))
     expect(await screen.findByText('El código del evento es obligatorio.')).toBeInTheDocument()
+    expect(screen.getByRole('combobox', { name: 'Categoría' })).toHaveAccessibleDescription(/.+/)
+    expect(screen.getByRole('combobox', { name: 'Sede' })).toHaveAccessibleDescription(/.+/)
     expect(solicitudesCreacion).toBe(0)
 
     await completarFormularioEvento(user)
@@ -313,8 +317,9 @@ describe('flujos ADMIN de eventos', () => {
     expect(screen.getByRole('textbox', { name: 'Nombre del evento' })).toHaveValue(eventoBase.name)
   })
 
-  it('TEST-FE-ADM-004 publica solo después de confirmar el DRAFT y actualiza ambas consultas de detalle', async () => {
+  it('TEST-FE-ADM-004 publica el DRAFT, actualiza el detalle y lo muestra en cartelera', async () => {
     let evento = eventoBase
+    let consultasPublicadas = 0
     server.use(
       mockHttp.get('/api/events/CMF-2027', ({ request }) => {
         expect(request.headers.get('Authorization')).toBe('Bearer admin-token')
@@ -328,8 +333,16 @@ describe('flujos ADMIN de eventos', () => {
       }),
     )
 
+    server.use(mockHttp.get('/api/events/published', () => {
+      consultasPublicadas += 1
+      return HttpResponse.json(evento.status === 'PUBLISHED' ? [evento] : [])
+    }))
     const user = userEvent.setup()
-    const { queryClient } = renderAdmin('/admin/eventos/CMF-2027')
+    const { queryClient, router } = renderAdmin('/eventos')
+    expect(await screen.findByText('Aún no hay eventos publicados.')).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: eventoBase.name })).not.toBeInTheDocument()
+    expect(consultasPublicadas).toBe(1)
+    await router.navigate('/admin/eventos/CMF-2027')
     expect(await screen.findByText('Borrador')).toBeInTheDocument()
     expect(await screen.findByRole('option', { name: 'Luna Norte' })).toBeInTheDocument()
 
@@ -341,6 +354,10 @@ describe('flujos ADMIN de eventos', () => {
 
     expect(await screen.findByText('Publicado')).toBeInTheDocument()
     expect(queryClient.getQueryData(['evento', 'CMF-2027'])).toMatchObject({ status: 'PUBLISHED' })
+    await router.navigate('/eventos')
+    expect(await screen.findByRole('heading', { name: 'Cartelera' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: eventoBase.name })).toBeInTheDocument()
+    expect(consultasPublicadas).toBeGreaterThan(1)
   })
 
   it('TEST-FE-ADM-005 conserva el estado DRAFT y la confirmación ante 409 al publicar', async () => {

@@ -1,8 +1,15 @@
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router'
 import { useAuth } from '../funcionalidades/auth/hooks'
 import { RUTAS } from '../lib/rutas'
+import {
+    alternarTema,
+    aplicarTema,
+    escucharCambioTema,
+    leerTemaGuardado,
+    obtenerTemaInicial,
+} from '../lib/tema'
 
 const clasesEnlace =
     'rounded-md px-3 py-2 text-sm font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600'
@@ -18,7 +25,32 @@ function clasesNavLink(activo: boolean) {
 
 export default function Navbar() {
     const [menuAbierto, setMenuAbierto] = useState(false)
+    const [tema, setTema] = useState(obtenerTemaInicial)
     const { sesion, cerrarSesion, tieneRol } = useAuth()
+
+    useEffect(() => {
+        aplicarTema(tema)
+        if (typeof window.matchMedia !== 'function') {
+            return escucharCambioTema(setTema)
+        }
+
+        const preferenciaSistema = window.matchMedia('(prefers-color-scheme: dark)')
+        const manejarCambioSistema = (evento: MediaQueryListEvent) => {
+            if (leerTemaGuardado()) return
+
+            const siguiente = evento.matches ? 'oscuro' : 'claro'
+            aplicarTema(siguiente)
+            setTema(siguiente)
+        }
+
+        preferenciaSistema.addEventListener('change', manejarCambioSistema)
+        const detenerCambioManual = escucharCambioTema(setTema)
+
+        return () => {
+            preferenciaSistema.removeEventListener('change', manejarCambioSistema)
+            detenerCambioManual()
+        }
+    }, [tema])
 
     function cerrarMenu() {
         setMenuAbierto(false)
@@ -162,42 +194,63 @@ export default function Navbar() {
                         )}
                     </div>
 
-                    <button
-                        type="button"
-                        aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
-                        aria-expanded={menuAbierto}
-                        aria-controls="menu-movil"
-                        onClick={() => setMenuAbierto((abierto) => !abierto)}
-                        className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 lg:hidden dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
-                    >
-                        {menuAbierto ? (
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M6 6l12 12M18 6 6 18" />
-                            </svg>
-                        ) : (
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M4 7h16M4 12h16M4 17h16" />
-                            </svg>
-                        )}
-                    </button>
+                    <div className="flex items-center gap-1">
+                        <button
+                            type="button"
+                            aria-label={tema === 'oscuro' ? 'Activar modo claro' : 'Activar modo oscuro'}
+                            aria-pressed={tema === 'oscuro'}
+                            onClick={() => setTema((actual) => alternarTema(actual))}
+                            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
+                        >
+                            {tema === 'oscuro' ? (
+                                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+                                </svg>
+                            ) : (
+                                <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+                                </svg>
+                            )}
+                        </button>
+
+                        <button
+                            type="button"
+                            aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
+                            aria-expanded={menuAbierto}
+                            aria-controls="menu-movil"
+                            onClick={() => setMenuAbierto((abierto) => !abierto)}
+                            className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-marca-600 lg:hidden dark:text-slate-200 dark:hover:bg-slate-800 dark:focus-visible:outline-marca-300"
+                        >
+                            {menuAbierto ? (
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M6 6l12 12M18 6 6 18" />
+                                </svg>
+                            ) : (
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                    className="h-6 w-6"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M4 7h16M4 12h16M4 17h16" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
                 </div>
 
                 {menuAbierto && (

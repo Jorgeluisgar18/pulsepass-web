@@ -1,0 +1,18 @@
+> pulsepass-web@0.0.0 test
+> vitest run
+
+
+ RUN  v5.1.1 C:/Users/ASUS/Documents/PROYECTOS INTELLIJ IDEA/pulsepass-web
+
+
+ Test Files  32 passed (32)
+      Tests  203 passed (203)
+   Start at 17:05:04
+   Duration 17.72s (environment 39%, tests 33%, setup 14%, import 13%, transform 13%)
+
+Bloque 42 verificado el 23 de noviembre de 2026:
+- Tema: pruebas de sistema claro, sistema oscuro, alternancia manual y precedencia manual.
+- Avisos: 4 tipos verifican roles accesibles y variantes dark.
+- DES-10: compra y cancelación conservan el modal ante 409 y muestran alert dentro del modal.
+
+Históricos preservados: 196/196 en 31 archivos; 191/191 en 30 archivos; 161/161.

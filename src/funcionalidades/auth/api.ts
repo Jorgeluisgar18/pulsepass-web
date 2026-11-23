@@ -1,4 +1,5 @@
 import { http } from '../../lib/http'
+import { validarRespuesta } from '../../lib/validacion'
 import {
   respuestaLoginSchema,
   usuarioAutenticadoSchema,
@@ -19,7 +20,7 @@ export async function iniciarSesionApi(
     operacion: 'login',
   })
 
-  return respuestaLoginSchema.parse(respuesta)
+  return validarRespuesta(respuestaLoginSchema, respuesta)
 }
 
 export async function obtenerPerfilAutenticadoApi(
@@ -31,7 +32,7 @@ export async function obtenerPerfilAutenticadoApi(
     operacion: 'identidad',
   })
 
-  return usuarioAutenticadoSchema.parse(respuesta)
+  return validarRespuesta(usuarioAutenticadoSchema, respuesta)
 }
 
 export async function registrarUsuarioApi(
@@ -48,7 +49,7 @@ export async function registrarUsuarioApi(
     body: JSON.stringify(cuerpo),
   })
 
-  return usuarioRespuestaSchema.parse(respuesta)
+  return validarRespuesta(usuarioRespuestaSchema, respuesta)
 }
 
 export async function obtenerUsuarioPorEmailApi(
@@ -64,7 +65,7 @@ export async function obtenerUsuarioPorEmailApi(
     },
   )
 
-  return usuarioRespuestaSchema.parse(respuesta)
+  return validarRespuesta(usuarioRespuestaSchema, respuesta)
 }
 
 export async function obtenerUsuarioPorUsernameApi(
@@ -80,5 +81,5 @@ export async function obtenerUsuarioPorUsernameApi(
     },
   )
 
-  return usuarioRespuestaSchema.parse(respuesta)
+  return validarRespuesta(usuarioRespuestaSchema, respuesta)
 }

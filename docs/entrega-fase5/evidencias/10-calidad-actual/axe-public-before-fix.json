@@ -1,0 +1,481 @@
+{
+  "date": "2026-11-23T20:13:50.811Z",
+  "results": [
+    {
+      "route": "/",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "route": "/eventos",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 18
+    },
+    {
+      "route": "/artistas",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/sedes",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/not-found",
+      "width": 360,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 18
+    },
+    {
+      "route": "/eventos",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#6366f1",
+                    "bgColor": "#0f172b",
+                    "contrastRatio": 3.99,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<article class=\"overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900\">",
+                      "target": [
+                        "article"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #0f172b, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"text-marca-700 dark:text-marca-500 text-xs font-bold tracking-wide uppercase\">Música</span>",
+              "target": [
+                ".dark\\:text-marca-500"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #0f172b, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passes": 18
+    },
+    {
+      "route": "/artistas",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/sedes",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/login",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/not-found",
+      "width": 360,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 16
+    },
+    {
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/not-found",
+      "width": 1280,
+      "theme": "light",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 7
+        }
+      ],
+      "passes": 16
+    },
+    {
+      "route": "/eventos",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9
+        }
+      ],
+      "passes": 22
+    },
+    {
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "color-contrast",
+                  "data": {
+                    "fgColor": "#6366f1",
+                    "bgColor": "#0f172b",
+                    "contrastRatio": 3.99,
+                    "fontSize": "9.0pt (12px)",
+                    "fontWeight": "bold",
+                    "messageKey": null,
+                    "expectedContrastRatio": "4.5:1"
+                  },
+                  "relatedNodes": [
+                    {
+                      "html": "<article class=\"overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900\">",
+                      "target": [
+                        "article"
+                      ]
+                    }
+                  ],
+                  "impact": "serious",
+                  "message": "Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #0f172b, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<span class=\"text-marca-700 dark:text-marca-500 text-xs font-bold tracking-wide uppercase\">Música</span>",
+              "target": [
+                ".dark\\:text-marca-500"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #6366f1, background color: #0f172b, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [],
+      "passes": 16
+    },
+    {
+      "route": "/artistas",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/sedes",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/login",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 21
+    },
+    {
+      "route": "/registro",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 22
+    },
+    {
+      "route": "/403",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    },
+    {
+      "route": "/not-found",
+      "width": 1280,
+      "theme": "dark",
+      "api": "real",
+      "violations": [],
+      "incomplete": [],
+      "passes": 14
+    }
+  ]
+}

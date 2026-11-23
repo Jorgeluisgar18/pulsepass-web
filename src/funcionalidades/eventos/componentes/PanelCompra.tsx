@@ -1,3 +1,4 @@
+import Aviso from '../../../componentes/Aviso'
 import { Link } from 'react-router'
 import { useNavigate } from 'react-router'
 import { useState } from 'react'
@@ -242,7 +243,7 @@ export default function PanelCompra({
           </dl>
 
           {compra.error && (
-            <div role="alert" className="space-y-2 text-sm text-red-700 dark:text-red-300">
+            <Aviso tipo="error">
               <p>{mensajeErrorCompra(compra.error)}</p>
               {compra.error instanceof ApiError &&
                 compra.error.status === 400 &&
@@ -253,7 +254,7 @@ export default function PanelCompra({
                     ))}
                   </ul>
                 )}
-            </div>
+            </Aviso>
           )}
 
           <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">

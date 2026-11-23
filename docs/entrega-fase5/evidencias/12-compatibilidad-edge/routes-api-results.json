@@ -1,0 +1,762 @@
+{
+  "date": "2026-11-23T20:57:20.425Z",
+  "base": "http://127.0.0.1:4173",
+  "api": "real",
+  "checks": [
+    {
+      "id": "ROUTE-1",
+      "route": "/",
+      "url": "http://127.0.0.1:4173/",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Descubre los mejores eventos",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/artists/active",
+          "status": 200
+        },
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/events/published",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-0.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-2",
+      "route": "/eventos",
+      "url": "http://127.0.0.1:4173/eventos",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Cartelera",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/artists/active",
+          "status": 200
+        },
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/events/published",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-1.png",
+      "api": "real"
+    },
+    {
+      "id": "API-STAGENAME",
+      "route": "/eventos",
+      "url": "http://127.0.0.1:4173/eventos?artista=Caribbean+Sound",
+      "role": "PUBLIC",
+      "status": "PASS",
+      "httpStatus": 200,
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-4",
+      "route": "/eventos/DEMO-EVENT-MUSIC-001",
+      "url": "http://127.0.0.1:4173/eventos/DEMO-EVENT-MUSIC-001",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Festival Caribe PulsePass",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/events/DEMO-EVENT-MUSIC-001",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-3.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-5",
+      "route": "/artistas",
+      "url": "http://127.0.0.1:4173/artistas",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Artistas",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/artists/active",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-4.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-6",
+      "route": "/artistas/1",
+      "url": "http://127.0.0.1:4173/artistas/1",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Solar Beat",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/artists/1",
+          "status": 200
+        },
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/events/by-artist",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-5.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-7",
+      "route": "/sedes",
+      "url": "http://127.0.0.1:4173/sedes",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Sedes",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/venues/active",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-6.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-8",
+      "route": "/sedes/DEMO-VENUE-CARIBE",
+      "url": "http://127.0.0.1:4173/sedes/DEMO-VENUE-CARIBE",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Centro de Eventos Caribe",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "PUBLIC",
+          "method": "GET",
+          "path": "/api/venues/DEMO-VENUE-CARIBE",
+          "status": 200
+        }
+      ],
+      "screenshot": "public-7.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-9",
+      "route": "/login",
+      "url": "http://127.0.0.1:4173/login",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Inicia sesión",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [],
+      "screenshot": "public-8.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-10",
+      "route": "/registro",
+      "url": "http://127.0.0.1:4173/registro",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Crea tu cuenta",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [],
+      "screenshot": "public-9.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-11",
+      "route": "/403",
+      "url": "http://127.0.0.1:4173/403",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "No tienes permisos",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [],
+      "screenshot": "public-10.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-12",
+      "route": "/qa-unknown-route",
+      "url": "http://127.0.0.1:4173/qa-unknown-route",
+      "role": "PUBLIC",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "No encontramos esta página",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [],
+      "screenshot": "public-11.png",
+      "api": "real"
+    },
+    {
+      "id": "ANON-GUARD",
+      "role": "PUBLIC",
+      "url": "http://127.0.0.1:4173/login",
+      "status": "PASS",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-14",
+      "route": "/cuenta",
+      "url": "http://127.0.0.1:4173/cuenta",
+      "role": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Mi cuenta",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/users/by-email",
+          "status": 200
+        }
+      ],
+      "screenshot": "user_a-13.png",
+      "api": "real"
+    },
+    {
+      "id": "API-USERNAME",
+      "route": "/cuenta",
+      "url": "http://127.0.0.1:4173/cuenta",
+      "role": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "status": "PASS",
+      "httpStatus": 200,
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-16",
+      "route": "/mis-tickets",
+      "url": "http://127.0.0.1:4173/mis-tickets",
+      "role": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Mis tickets",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/tickets/by-user",
+          "status": 200
+        }
+      ],
+      "screenshot": "user_a-15.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-17",
+      "route": "/mis-tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "url": "http://127.0.0.1:4173/mis-tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "role": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Festival de Musica del Caribe",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+          "status": 200
+        }
+      ],
+      "screenshot": "user_a-16.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-18",
+      "route": "/compra/confirmacion/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "url": "http://127.0.0.1:4173/compra/confirmacion/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "role": "USER_A",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Compra confirmada",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "USER_A",
+          "method": "GET",
+          "path": "/api/tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+          "status": 200
+        }
+      ],
+      "screenshot": "user_a-17.png",
+      "api": "real"
+    },
+    {
+      "id": "USER-ADMIN-GUARD",
+      "role": "USER_A",
+      "url": "http://127.0.0.1:4173/403",
+      "status": "PASS",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-20",
+      "route": "/staff/validacion",
+      "url": "http://127.0.0.1:4173/staff/validacion",
+      "role": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Validación de ingreso",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "STAFF",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        }
+      ],
+      "screenshot": "staff-19.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-21",
+      "route": "/staff/eventos/DEMO-EVENT-TICKETS-001/tickets",
+      "url": "http://127.0.0.1:4173/staff/eventos/DEMO-EVENT-TICKETS-001/tickets",
+      "role": "STAFF",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Tickets pagados",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "STAFF",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "STAFF",
+          "method": "GET",
+          "path": "/api/events/DEMO-EVENT-TICKETS-001/tickets/paid",
+          "status": 200
+        }
+      ],
+      "screenshot": "staff-20.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-22",
+      "route": "/admin/eventos",
+      "url": "http://127.0.0.1:4173/admin/eventos",
+      "role": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Administración de eventos",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        }
+      ],
+      "screenshot": "admin-21.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-23",
+      "route": "/admin/eventos/nuevo",
+      "url": "http://127.0.0.1:4173/admin/eventos/nuevo",
+      "role": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Nuevo evento",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/venues/active",
+          "status": 200
+        }
+      ],
+      "screenshot": "admin-22.png",
+      "api": "real"
+    },
+    {
+      "id": "ROUTE-24",
+      "route": "/admin/eventos/DEMO-EVENT-DRAFT-001",
+      "url": "http://127.0.0.1:4173/admin/eventos/DEMO-EVENT-DRAFT-001",
+      "role": "ADMIN",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "h1": "Gestionar evento",
+      "status": "PASS",
+      "documentHttp": 200,
+      "http": [
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/auth/me",
+          "status": 200
+        },
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/artists/active",
+          "status": 200
+        },
+        {
+          "actor": "ADMIN",
+          "method": "GET",
+          "path": "/api/events/DEMO-EVENT-DRAFT-001",
+          "status": 200
+        }
+      ],
+      "screenshot": "admin-23.png",
+      "api": "real"
+    }
+  ],
+  "http": [
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/events/published",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/artists/by-stage-name",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/events/DEMO-EVENT-MUSIC-001",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/artists/1",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/events/by-artist",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "actor": "PUBLIC",
+      "method": "GET",
+      "path": "/api/venues/DEMO-VENUE-CARIBE",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/users/by-email",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/users/by-username",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/tickets/by-user",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/tickets/TKT-B248C79B-1472-464B-AE62-84448EB263F0",
+      "status": 200
+    },
+    {
+      "actor": "USER_A",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "STAFF",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "actor": "STAFF",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "STAFF",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "STAFF",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "STAFF",
+      "method": "GET",
+      "path": "/api/events/DEMO-EVENT-TICKETS-001/tickets/paid",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/venues/active",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/artists/active",
+      "status": 200
+    },
+    {
+      "actor": "ADMIN",
+      "method": "GET",
+      "path": "/api/events/DEMO-EVENT-DRAFT-001",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "blockedWrites": [],
+  "browserVersion": "158.0.4370.33"
+}

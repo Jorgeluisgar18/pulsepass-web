@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event'
 import { HttpResponse, http as mockHttp } from 'msw'
 import { createMemoryRouter, Outlet, useLocation } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
-import { describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { AuthProvider } from '../../../funcionalidades/auth/AuthContext'
 import type { Rol } from '../../../funcionalidades/auth/tipos'
 import { server } from '../../mocks/server'
@@ -139,6 +139,14 @@ function manejarEvento(status = 'PUBLISHED') {
 }
 
 describe('flujos USER de tickets', () => {
+  beforeEach(() => {
+    vi.spyOn(Date, 'now').mockReturnValue(Date.UTC(2026, 10, 23, 12))
+  })
+
+  afterEach(() => {
+    vi.restoreAllMocks()
+  })
+
   it('TEST-FE-TKT-001 compra con la identidad verificada y TEST-FE-TKT-004 envía el email de sesión', async () => {
     prepararSesion()
     manejarEvento()
@@ -329,12 +337,12 @@ describe('flujos USER de tickets', () => {
     ).not.toBeInTheDocument()
   })
 
-  it('TEST-FE-TKT-010 no muestra la acción Cancelar para tickets RESERVED', async () => {
+  it.each(['RESERVED', 'USED', 'CANCELLED'] as const)('TEST-FE-TKT-010 no muestra Cancelar para tickets %s en listado y detalle', async (status) => {
     prepararSesion()
-    const reserved = { ...ticketBase, status: 'RESERVED' }
+    const ticket = { ...ticketBase, status }
     server.use(
-      mockHttp.get('/api/tickets/by-user', () => HttpResponse.json([reserved])),
-      mockHttp.get('/api/tickets/TKT-2026-ABC123', () => HttpResponse.json(reserved)),
+      mockHttp.get('/api/tickets/by-user', () => HttpResponse.json([ticket])),
+      mockHttp.get('/api/tickets/TKT-2026-ABC123', () => HttpResponse.json(ticket)),
     )
     const { router } = renderAplicacion('/mis-tickets')
 
@@ -362,7 +370,11 @@ describe('flujos USER de tickets', () => {
     await user.click(await screen.findByRole('button', { name: 'Confirmar cancelación' }))
 
     expect(await screen.findByText('El ticket ya fue validado y no puede cancelarse.')).toBeInTheDocument()
-    expect(screen.getByRole('dialog', { name: 'Cancelar ticket' })).toBeInTheDocument()
+    const dialogo = screen.getByRole('dialog', { name: 'Cancelar ticket' })
+    expect(dialogo).toBeInTheDocument()
+    expect(within(dialogo).getByRole('alert')).toHaveTextContent(
+      'El ticket ya fue validado y no puede cancelarse.',
+    )
   })
 
   it.each([

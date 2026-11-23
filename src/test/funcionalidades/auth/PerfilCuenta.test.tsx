@@ -83,7 +83,7 @@ describe('perfil propio de Cuenta', () => {
 
     await expect(
       obtenerUsuarioPorUsernameApi(usuarioValidado.username, 'jwt-cuenta'),
-    ).rejects.toMatchObject({ name: 'ZodError' })
+    ).rejects.toMatchObject({ name: 'ApiError', tipo: 'respuesta-invalida', message: 'La respuesta del servidor no tiene el formato esperado.' })
   })
 
   it.each(['USER', 'STAFF', 'ADMIN'] as const)(
